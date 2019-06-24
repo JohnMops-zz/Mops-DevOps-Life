@@ -1,2 +1,0 @@
-# Central
-DevOps Study
