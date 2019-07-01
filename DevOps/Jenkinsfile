@@ -11,7 +11,7 @@ pipeline {
     sh """ssh -tt ubuntu@$HOST_NAME -o StrictHostKeyChecking=no << EOF 
     hostname
     sudo su
-    docker run -d --name web1 -p 80:80 nginx
+    docker run -d --name web1 -p $PORT_NUM &IMAGE_NAME
     docker ps
     exit
     exit
