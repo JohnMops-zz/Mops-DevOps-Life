@@ -13,9 +13,11 @@ pipeline {
     sudo su
     docker run -d --name web1 -p 80:443 nginx
     docker ps
-    hostname
-    EOF"""
     exit
+    exit
+    exit
+    EOF"""
+    
 }
                         
                     }
