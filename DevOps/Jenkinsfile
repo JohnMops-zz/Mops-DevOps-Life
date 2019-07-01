@@ -8,7 +8,7 @@ pipeline {
                     sshagent(['4194c06f-9c79-437f-8471-5cef93a6fb08']) {
     // some block
 
-    sh """ssh -tt ubuntu@$HOST_NAME -o StrictHostKeyChecking=no << EOF 
+    sh """ssh -tt ubuntu@$HOST_NAME  << EOF 
     hostname
     sudo su
     docker run -d $CONTAINER_NAME -p $PORT_NUM $IMAGE_NAME
