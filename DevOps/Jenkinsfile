@@ -12,9 +12,9 @@ pipeline {
                     ok 'OK'
                     parameters {
                         string defaultValue: '3.14.254.80', description: '', name: 'HOST_NAME', trim: false
-                        string defaultValue: 'name', description: '', name: 'CONTAINER_NAME', trim: false
+                        string defaultValue: '--name', description: '', name: 'CONTAINER_NAME', trim: false
                         string defaultValue: '80:80', description: '', name: 'PORT_NUM', trim: false
-                        string defaultValue: '--name', description: '', name: 'IMAGE_NAME', trim: false
+                        string defaultValue: 'imageName', description: '', name: 'IMAGE_NAME', trim: false
   }
 }
             
