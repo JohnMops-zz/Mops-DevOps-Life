@@ -2,8 +2,9 @@ pipeline {
     agent any
     stages {
         stage ('test') {
+            timeout(time:30, unit:'SECONDS') {
             input {
-                    timeout(time:30, unit:'SECONDS') {
+                    
                     message 'Enter Hostname'
                     id 'host'
                     ok 'OK'
