@@ -2,9 +2,8 @@ pipeline {
     agent any
     stages {
         stage ('test') {
-            try {
-                    timeout(time:30, unit:'SECONDS') {
             input {
+                    timeout(time:30, unit:'SECONDS') {
                     message 'Enter Hostname'
                     id 'host'
                     ok 'OK'
@@ -15,8 +14,9 @@ pipeline {
                         string defaultValue: 'imageName', description: '', name: 'IMAGE_NAME', trim: false
   }
 }
-                    }
             }
+                   
+            
             steps{
                 
 
