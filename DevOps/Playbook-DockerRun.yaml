@@ -1,3 +1,5 @@
+---
+
 - name: Mops's Playbook
   hosts: all
   gather_facts: false
