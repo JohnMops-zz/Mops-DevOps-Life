@@ -1,6 +1,4 @@
 ---
-# Run with ansible-playbook <filename> -k
-#   (make sure to add the IPs of machines you want to manage to /etc/ansible/hosts first)
 
 - hosts: all
   gather_facts: False
@@ -16,7 +14,7 @@
     - name: Install Python 2
       raw: test -e /usr/bin/python || (apt-get update && apt-get install -y python)
 
-    - name: Fancy way of doing authorized_keys
+    - name: Cool way of doing authorized_keys
       authorized_key: user=root
                       exclusive=no
                       key="{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
@@ -38,9 +36,5 @@
       # only run this task block when we've just changed /etc/environment
       when: newenv.changed
 
-    #- name: Create /root/.ssh
-    #  file: path=/root/.ssh state=directory mode=0700
 
-    #- name: Create /root/.ssh/authorized_keys from our local ssh pubkey
-    #  lineinfile: dest=/root/.ssh/authorized_keys line="{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
 
