@@ -1,10 +1,6 @@
 ---
-# Run with ansible-playbook <filename> -k
-#   (make sure to add the IPs of machines you want to manage to /etc/ansible/hosts first)
 
-
-
-    - name: Update Packages
+- name: Update Packages
       raw: (apt-get update && apt-get -y upgrade)
 
     - name: Install Python 2
@@ -32,9 +28,5 @@
       # only run this task block when we've just changed /etc/environment
       when: newenv.changed
 
-    #- name: Create /root/.ssh
-    #  file: path=/root/.ssh state=directory mode=0700
 
-    #- name: Create /root/.ssh/authorized_keys from our local ssh pubkey
-    #  lineinfile: dest=/root/.ssh/authorized_keys line="{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
 
