@@ -1,6 +1,6 @@
 ---
 
-- name: Update Packages
+    - name: Update Packages
       raw: (apt-get update && apt-get -y upgrade)
 
     - name: Install Python 2
