@@ -2,9 +2,7 @@
 
 - name: Configure Host
   hosts: all
-  gather_facts: false
   roles:
     - conf
     - web
-  
   
