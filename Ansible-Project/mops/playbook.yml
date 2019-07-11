@@ -1,0 +1,41 @@
+---
+
+- name: Mops's Playbook
+  hosts: all
+  gather_facts: false
+  pre_tasks:
+    - raw: sudo apt -qy update&& sudo apt install -qy python3&& sudo apt install -qy python&& sudo apt install -qy python-pip&& sudo pip install docker-py
+    - setup:
+
+  tasks:
+  - name: Install docker
+    apt:
+      name: docker.io
+      state: present
+  - name: Start docker service
+    service:
+      name: docker
+      state: started
+
+  - name: Create Folder
+    file:
+      path: /opt/jenkins
+      state: directory
+
+  - name: Change Owner
+    file:
+      path: /opt/jenkins
+      owner: 1000
+      group: 1000
+
+
+  - name: Start Jenkins container
+    docker_container:
+      name: Jen
+      image: jenkinsci/jenkins:lts
+      state: started
+      ports:
+        - "8080:8080"
+        - "50000:50000"
+      volumes:
+        - /opt/jenkins:/var/jenkins_home
