@@ -5,6 +5,7 @@ pipeline {
     stages {
         stage('checkout'){
             steps {
+                cleanWs()
                 script {
                     git credentialsId: 'devopint', url: 'https://github.com/JohnMops/Mops-DevOps-Life'
                     sh 'ls'
