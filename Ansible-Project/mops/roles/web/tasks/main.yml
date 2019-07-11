@@ -1,7 +1,6 @@
 ---
 
 - name: Install util packages
-  gather_facts: True
   package: name={{ item }} state=present
   with_items:
     - python-apt
