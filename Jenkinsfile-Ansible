@@ -25,6 +25,7 @@ pipeline {
                 
             steps {
                 script {
+                    sh 'cd %WORKSPACE%'
                     sh "pwd"
                     sh 'ls'
                     sh "echo $HOST >> hosts"
