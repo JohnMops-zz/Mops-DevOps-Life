@@ -24,8 +24,8 @@ pipeline {
              }
                 
             steps {
-                script {
-                    sh 'cd "%WORKSPACE%"'
+                script {  
+                    sh 'git pull origin master'
                     sh "pwd"
                     sh 'ls'
                     sh "echo $HOST >> hosts"
