@@ -1,6 +1,7 @@
 ---
 
 - name: Configure Host
+  gather_facts: False
   hosts: all
   roles:
     - conf
