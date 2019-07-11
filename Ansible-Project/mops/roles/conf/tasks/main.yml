@@ -2,12 +2,6 @@
 # Run with ansible-playbook <filename> -k
 #   (make sure to add the IPs of machines you want to manage to /etc/ansible/hosts first)
 
-- name: Configure Host
-  gather_facts: False
-  remote_user: ubuntu
-  become: yes
-  become_user: root
-  become_method: sudo
 
   tasks:
     - name: Update Packages
