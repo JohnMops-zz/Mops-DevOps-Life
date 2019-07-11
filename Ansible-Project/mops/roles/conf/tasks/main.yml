@@ -2,7 +2,7 @@
 # Run with ansible-playbook <filename> -k
 #   (make sure to add the IPs of machines you want to manage to /etc/ansible/hosts first)
 
-- hosts: all
+- name: Configure Host
   gather_facts: False
   remote_user: ubuntu
   become: yes
