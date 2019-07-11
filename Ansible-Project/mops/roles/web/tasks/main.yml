@@ -9,7 +9,7 @@
   apt_repository: repo='ppa:nginx/stable' update_cache=yes
 
 - name: Install Nginx
-  package: name=ngnix state=present
+  package: name=nginx state=present
   
 - name: Remove default config
   file: path=/etc/ngnix/sites_enabled/default state=absent
