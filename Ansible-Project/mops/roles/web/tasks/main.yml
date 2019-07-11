@@ -10,3 +10,10 @@
   
 - name: Remove default config
   file: path=/etc/ngnix/sites_enabled/default state: absent
+  
+- name: Copying Template Conf
+  template: src=ngnix.conf dest=/etc/ngnix/conf.d/ngnix.conf
+
+- name: Start Ngnix and Run on boot
+  service: name=ngnix state=started enabled=yes
+  
