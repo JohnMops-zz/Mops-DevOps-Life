@@ -3,7 +3,7 @@
 - name: Install util packages
   package: name={{ item }} state=present
   with_items:
-    - python-apt
+    - apt
 
 - name: Install Nginx
   package: name=ngnix state=present
