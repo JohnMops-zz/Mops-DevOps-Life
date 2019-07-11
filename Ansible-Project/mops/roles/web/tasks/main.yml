@@ -16,8 +16,8 @@
   
 - name: Copying Template Conf
   template: src=ngnix.conf dest=/etc/nginx/conf.d/ngnix.conf
-  notify:
-    - reload nginx
+  #notify:
+    #- reload nginx
 
 - name: Start Nginx and Run on boot
   service: name=nginx state=started enabled=yes
