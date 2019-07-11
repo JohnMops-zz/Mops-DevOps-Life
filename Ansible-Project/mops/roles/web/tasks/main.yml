@@ -9,7 +9,7 @@
   package: name=ngnix state=present
   
 - name: Remove default config
-  file: path=/etc/ngnix/sites_enabled/default state: absent
+  file: path=/etc/ngnix/sites_enabled/default state:absent
   
 - name: Copying Template Conf
   template: src=ngnix.conf dest=/etc/ngnix/conf.d/ngnix.conf
