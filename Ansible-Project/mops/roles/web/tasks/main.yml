@@ -15,8 +15,10 @@
   file: path=/etc/ngnix/sites_enabled/default state=absent
   
 - name: Copying Template Conf
-  template: src=ngnix.conf dest=/etc/ngnix/conf.d/ngnix.conf
+  template: src=ngnix.conf dest=/etc/nginx/conf.d/ngnix.conf
+  notify:
+    - reload nginx
 
-- name: Start Ngnix and Run on boot
-  service: name=ngnix state=started enabled=yes
+- name: Start Nginx and Run on boot
+  service: name=nginx state=started enabled=yes
   
