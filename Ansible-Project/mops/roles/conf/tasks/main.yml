@@ -3,7 +3,7 @@
 #   (make sure to add the IPs of machines you want to manage to /etc/ansible/hosts first)
 
 
-  tasks:
+
     - name: Update Packages
       raw: (apt-get update && apt-get -y upgrade)
 
