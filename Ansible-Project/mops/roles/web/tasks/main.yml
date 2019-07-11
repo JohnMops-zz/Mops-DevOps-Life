@@ -1,0 +1,12 @@
+---
+
+- name: Install util packages
+  package: name={{ item}} state:present
+  with_items:
+    - python-apt
+
+- name: Install Nginx
+  package: name=ngnix state=present
+  
+- name: Remove default config
+  file: path=/etc/ngnix/sites_enabled/default state: absent
