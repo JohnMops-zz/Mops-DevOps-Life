@@ -38,6 +38,7 @@
       - virtualenv
       - supervisor
       - uwsgi
+      - Flask
       
   - name: Create Init Folder
     file: 
