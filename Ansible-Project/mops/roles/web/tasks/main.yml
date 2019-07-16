@@ -85,6 +85,6 @@
       name: flask
       state: restarted
       enabled: yes
-    when: appy.py.changed
+    when: app.py.changed
   
   
