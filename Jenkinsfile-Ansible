@@ -12,13 +12,12 @@ pipeline {
             }
         }
         stage('Ansible Playbook') {
-             targetIP = input{
-                message 'Enter Host'
-                    id 'Host'
-                    ok 'OK'
-                    parameters {
-                        string defaultValue: 'Host', description: '', name: 'HOST', trim: false
-                    }
+             targetIPstring = input(
+                            id: 'userInput', message: 'ip add',
+                            parameters: [
+                                string(defaultValue: '0.0.0.0',
+                                       description: 'ip address',
+                                       name: 'IP')])
              }
                 
             steps {
