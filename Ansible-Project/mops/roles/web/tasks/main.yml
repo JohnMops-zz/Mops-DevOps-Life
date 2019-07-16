@@ -31,6 +31,7 @@
     vars:
       packages:
       - python3-pip
+      - python-pip
 
   - name: install various libraries with pip
     pip: 
@@ -40,6 +41,7 @@
       - supervisor
       - uwsgi
       - Flask
+      - flask
       
   - name: Create Init Folder
     file: 
@@ -61,7 +63,7 @@
       dest: /lib/systemd/system/flask.service
       owner: root
       group: root
-      mode: u+rwx
+      
       
   - name: Move Needed Files To Host
     template:
