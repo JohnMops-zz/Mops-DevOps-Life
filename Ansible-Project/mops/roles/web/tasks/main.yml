@@ -59,7 +59,7 @@
       dest: /lib/systemd/system/flask.service
       owner: root
       group: root
-      mode: u+rw
+      mode: u+rwx
       
   - name: Move Needed Files To Host
     template:
@@ -67,7 +67,7 @@
       dest: /home
       owner: root
       group: root
-      mode: u+rw
+      mode: u+rwx
   
   - name: Start Flask service
     service:
