@@ -40,8 +40,9 @@
       - virtualenv
       - supervisor
       - uwsgi
-      - Flask
-      - flask
+    
+  - name: Install pip3 flask
+    raw: pip3 install flask
       
   - name: Create Init Folder
     file: 
