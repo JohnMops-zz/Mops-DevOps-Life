@@ -39,6 +39,13 @@
       - supervisor
       - uwsgi
       
+  - name: Create Init Folder
+    file: 
+      path: /etc/init
+      owner: root
+      group: root
+      state: directory
+      
   - name: Move Needed Files To Host
     template:
       src: templates/flask.conf
