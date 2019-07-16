@@ -29,7 +29,7 @@
       name: "{{ packages }}"
     vars:
       packages:
-      - python-pip
+      - python-pip3
 
   - name: install various libraries with pip
     pip: 
