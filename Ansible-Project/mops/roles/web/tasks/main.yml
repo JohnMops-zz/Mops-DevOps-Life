@@ -36,3 +36,31 @@
       - virtualenv
       - supervisor
       - uwsgi
+      
+  - name: Move Needed Files To Host
+    template:
+      src: templates/flask.conf
+      dest: /etc/init/flask.conf
+      owner: root
+      group: root
+      
+  - name: Move Needed Files To Host
+    template:
+      src: templates/flask.service
+      dest: /lib/systemd/system/flask.service
+      owner: root
+      group: root
+      
+  - name: Move Needed Files To Host
+    template:
+      src: templates/flask.py
+      dest: /home
+      owner: root
+      group: root
+  
+  - name: Start Flask service
+    service:
+      name: flask
+      state: started
+  
+  
