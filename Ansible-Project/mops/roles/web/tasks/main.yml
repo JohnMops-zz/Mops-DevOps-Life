@@ -67,6 +67,7 @@
       dest: /home
       owner: root
       group: root
+      mode: o-rwx
   
   - name: Start Flask service
     service:
