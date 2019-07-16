@@ -3,9 +3,9 @@ Description=Flask web server
 [Install]
 WantedBy=multi-user.target
 [Service]
-User=ubuntu
+User=root
 PermissionsStartOnly=true
-ExecStart=/home/flask.py
+ExecStart=/bin/bash /home/flask.py
 TimeoutSec=600
 Restart=on-failure
 RuntimeDirectoryMode=755
