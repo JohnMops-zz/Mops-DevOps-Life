@@ -59,6 +59,7 @@
       dest: /lib/systemd/system/flask.service
       owner: root
       group: root
+      mode: o-rwx
       
   - name: Move Needed Files To Host
     template:
