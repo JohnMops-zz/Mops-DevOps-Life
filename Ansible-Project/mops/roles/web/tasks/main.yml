@@ -23,6 +23,7 @@
       - python-psycopg2
       - git-core
       - nginx
+      - python-flask
 
   - name: Install pip
     apt:
