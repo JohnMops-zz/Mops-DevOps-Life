@@ -24,9 +24,12 @@
       - git-core
       - nginx
 
-  - name: install pip
-    easy_install: 
-      name: pip
+  - name: Install pip
+    apt:
+      name: "{{ packages }}"
+    vars:
+      packages:
+      - pip
 
   - name: install various libraries with pip
     pip: 
