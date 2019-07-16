@@ -5,7 +5,7 @@ WantedBy=multi-user.target
 [Service]
 User=root
 PermissionsStartOnly=true
-ExecStart=/bin/bash /home/flask.py
+ExecStart=user/bin/python /home/flask.py
 TimeoutSec=600
 Restart=on-failure
 RuntimeDirectoryMode=755
