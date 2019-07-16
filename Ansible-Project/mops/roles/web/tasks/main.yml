@@ -19,7 +19,6 @@
       - mysql-client
       - python-dev
       - python-setuptools
-      - python-imaging
       - python-mysqldb
       - python-psycopg2
       - git-core
