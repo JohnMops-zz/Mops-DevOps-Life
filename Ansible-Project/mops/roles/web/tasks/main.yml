@@ -73,10 +73,18 @@
       owner: root
       group: root
       mode: u+rwx
+    register: app.py
   
   - name: Start Flask service
     service:
       name: flask
       state: started
+      
+  - name: Restart Flask
+    service:
+      name: flask
+      state: restarted
+      enabled: yes
+    when: appy.py.changed
   
   
