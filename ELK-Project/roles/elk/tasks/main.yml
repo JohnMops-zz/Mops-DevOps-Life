@@ -3,13 +3,6 @@
 - name: Increase memory
   raw: sysctl -w vm.max_map_count=262144
   
-- name: Move elasticsearch.yml
-  template:
-    src: templates/elasticsearch.yml
-    dest: /opt/elasticsearch/config/elasticsearch.yml
-    owner: 1000
-    group: 1000
-
 - name: Run Elasticsearch Docker
   docker_container:
     name: elasticsearch
@@ -17,28 +10,19 @@
     state: started
     volumes:
       - /opt/elasticsearch/data:/usr/share/elasticsearch/data
-      - /opt/elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - /opt/elasticsearch/config/:/usr/share/elasticsearch/config/elasticsearch.yml
     ports:
      - "9200:9200"
      - "9300:9300"
      
-     
-- name: Move Kibana.yml
-  template:
-    src: templates/kibana.yml
-    dest: /opt/kibana/kibana.yml
-    owner: 1000
-    group: 1000
-
-   
-     
+          
 - name: Run Kibana Docker
   docker_container:
     name: kibana
     image: kibana:7.2.0
     state: started
     volumes:
-      - /opt/kibana/kibana.yml:/usr/share/kibana/config/kibana.yml
+      - /opt/kibana/:/usr/share/kibana/config/kibana.yml
     links:
       - elasticsearch:elasticsearch
     ports:
