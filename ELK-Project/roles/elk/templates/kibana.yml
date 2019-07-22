@@ -5,4 +5,4 @@
 # Default Kibana configuration for docker target
 server.name: kibana
 server.host: "0"
-elasticsearch.hosts: [ "http://{{ elk_host }}:9200" ]
+elasticsearch.hosts: [ "http://elasticsearch:9200" ]
