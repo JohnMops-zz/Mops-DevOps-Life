@@ -9,10 +9,10 @@
 
   tasks:
     - name: Update Packages
-      raw: (apt-get update && apt-get -y upgrade && pip install docker-py)
+      raw: (apt-get update && apt-get -y upgrade)
 
     - name: Install Python 2
-      raw: test -e /usr/bin/python || (apt-get update && apt-get install -y python)
+      raw: test -e /usr/bin/python || (apt-get update && apt-get install -y python && pip install docker-py)
 
     - name: COMMON | Set environment
       blockinfile:
