@@ -6,7 +6,7 @@
 #network.host: localhost
 
 
-discovery.type=single-node
+discovery.type: single-node
 
 
 
