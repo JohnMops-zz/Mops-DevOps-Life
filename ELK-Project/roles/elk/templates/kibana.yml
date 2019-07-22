@@ -3,6 +3,6 @@
 #
 
 # Default Kibana configuration for docker target
-server.name: kibana
-server.host: "18.221.168.144"
+#server.name: kibana
+#server.host: "18.221.168.144"
 elasticsearch.hosts: [ "http://elasticsearch:9200" ]
