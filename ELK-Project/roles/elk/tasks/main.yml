@@ -9,7 +9,7 @@
     image: elasticsearch:7.2.0
     state: started
     volumes:
-      - opt/elasticsearch/data/node:opt/elasticsearch/data/node
+      - opt/elasticsearch/data/:opt/elasticsearch/data/
     ports:
      - "9200:9200"
      - "9300:9300"
