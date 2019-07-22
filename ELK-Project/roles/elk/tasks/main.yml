@@ -36,11 +36,12 @@
 - name: Run Kibana Docker
   docker_container:
     name: kibana
+    hostname: kibana
     image: docker.elastic.co/kibana/kibana:7.2.0
     state: started
     volumes:
       - /opt/kibana/kibana.yml:/usr/share/kibana/config/kibana.yml
     links:
-      - elasticsearch:elasticsearch
+      - kibana:elasticsearch
     ports:
      - "5601:5601"
