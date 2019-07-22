@@ -1,1 +1,1 @@
-elasticsearch.hosts: ["{{ elk_host }}:9200"]
+elasticsearch.hosts: "http://{{ elk_host }}:9200"
