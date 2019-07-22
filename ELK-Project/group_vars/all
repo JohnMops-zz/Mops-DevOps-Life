@@ -3,4 +3,7 @@ slave_ip: metric_ip
 
 
 
+host_key_checking = False
+
+
 
