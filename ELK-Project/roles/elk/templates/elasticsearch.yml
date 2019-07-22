@@ -1,2 +1,3 @@
-cluster.initial_master_nodes: ["3.17.56.160"]
+cluster.name: "docker-cluster"
+network.host: {{ elk_host }}
 discovery.type=single-node
