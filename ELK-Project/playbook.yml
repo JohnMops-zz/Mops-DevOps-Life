@@ -4,3 +4,4 @@
   hosts: elastic
   roles:
     - Docker
+    - elk
