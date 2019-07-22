@@ -16,6 +16,7 @@
       state: directory
       owner: 1000
       group: 1000
+      mode: '0777'
       
   - name: Create Folder DB
     file:
@@ -23,5 +24,6 @@
       state: directory
       owner: 1000
       group: 1000
+      mode: '0777'
  
  
