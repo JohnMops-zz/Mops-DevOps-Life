@@ -1,3 +1,4 @@
-discovery.seed_hosts: elasticsearch
+discovery.seed_hosts=elasticsearch
+node.name=elasticsearch
 network.host: localhost
 
