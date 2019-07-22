@@ -1,0 +1,25 @@
+  - name: Install docker
+      apt:
+        name: docker.io
+        state: present
+        
+  - name: Start docker service
+    service:
+      name: docker
+      state: started
+
+  - name: Create Folder Kibana
+    file:
+      path: /opt/kibana
+      state: directory
+      owner: 1000
+      group: 1000
+      
+  - name: Create Folder DB
+    file:
+      path: opt/elasticsearch/data
+      state: present
+      owner: 1000
+      group: 1000
+ 
+ 
