@@ -1,2 +1,2 @@
-cluster.initial_master_nodes: {{ elk_host }}
+node.name: ${HOSTNAME}
 network.host: {{ elk_host }}
