@@ -7,6 +7,8 @@
   template:
     src: templates/elasticsearch.yml
     dest: opt/elasticsearch/conf/elasticsearch.yml
+    owner: root
+    group: root
 
 - name: Run Elasticsearch Docker
   docker_container:
@@ -15,6 +17,7 @@
     state: started
     volumes:
       - /opt/elasticsearch/data:/usr/share/elasticsearch/data
+      - /opt/elasticsearch/conf:/usr/share/elasticsearch/conf
     ports:
      - "9200:9200"
      - "9300:9300"
