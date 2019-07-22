@@ -3,7 +3,7 @@ node.name: "elasticsearch"
 cluster.initial_master_nodes: elasticsearch
 node.master: true
 #bootstrap.mlockall: true
-network.host: {{ elk_host }}
+network.host: localhost
 
 
 
