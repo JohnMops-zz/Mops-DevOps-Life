@@ -1,6 +1,6 @@
 ---
 
 - name: Configure Host
-  hosts: all
+  hosts: elastic
   roles:
     - Docker
