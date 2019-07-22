@@ -25,12 +25,12 @@
       
   - name: Create Folder conf
     file:
-      path: /opt/elasticsearch/conf
+      path: /opt/elasticsearch/config
       state: directory
       
   - name: Change Owner
     file:
-      path: /opt/elasticsearch/conf
+      path: /opt/elasticsearch/config
       recurse: yes
       owner: 1000
       group: 1000
