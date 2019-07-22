@@ -15,7 +15,7 @@
       raw: test -e /usr/bin/python || (apt-get update && apt-get install -y python)
     
     - name: Install docker py
-      raw: apt-get install python-pip
+      raw: apt-get -y install python-pip
       
     - name: Install docker py
       raw: pip install docker-py
