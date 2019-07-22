@@ -42,6 +42,6 @@
     volumes:
       - /opt/kibana/kibana.yml:/usr/share/kibana/config/kibana.yml
     links:
-      - kibana:elasticsearch
+      - elasticsearch:elasticsearch
     ports:
      - "5601:5601"
