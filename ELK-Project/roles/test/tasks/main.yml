@@ -1,9 +1,7 @@
 ---
 
 - name: Deploy ES and Kibana in 2 Docker containers
-  raw: pip install docker-py
   docker_service:
-    project_name: "elk_docker"
     definition:
       version: "3"
       services:
