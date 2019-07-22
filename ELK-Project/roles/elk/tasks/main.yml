@@ -16,8 +16,8 @@
     image: elasticsearch:7.2.0
     state: started
     volumes:
-      - /opt/elasticsearch/data:/usr/share/elasticsearch/data
-      - /opt/elasticsearch/conf:/usr/share/elasticsearch
+      - /opt/elasticsearch/data:/usr/share/elasticsearch/data/
+      - /opt/elasticsearch/conf:/usr/share/elasticsearch/config/
     ports:
      - "9200:9200"
      - "9300:9300"
