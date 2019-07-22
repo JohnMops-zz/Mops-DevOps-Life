@@ -20,10 +20,14 @@
       
   - name: Create Folder DB
     file:
-      path: opt/elasticsearch/data
+      path: opt/elasticsearch/data/node
       state: directory
-      owner: root
-      group: root
-      mode: '0777'
+     
+  - name: Change Owner
+    file:
+      path: opt/elasticsearch/data/node
+      owner: 1000
+      group: 1000
+
  
  
