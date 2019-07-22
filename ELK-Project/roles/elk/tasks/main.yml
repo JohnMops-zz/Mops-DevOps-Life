@@ -9,7 +9,7 @@
     image: elasticsearch:7.2.0
     state: started
     volumes:
-      - opt/elasticsearch/data:opt/elasticsearch/data
+      - /opt/elasticsearch/data:/usr/share/elasticsearch/data
     ports:
      - "9200:9200"
      - "9300:9300"
@@ -29,7 +29,7 @@
     image: kibana:7.2.0
     state: started
     volumes:
-      - /opt/kibana:/usr/share/kibana/config/kibana.yml
+      - /opt/kibana:/usr/share/kibana/config
     ports:
      - "5601:5601"
      
