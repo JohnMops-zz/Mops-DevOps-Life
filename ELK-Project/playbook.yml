@@ -1,6 +1,6 @@
 ---
 
-- name: Configure Host
+- name: Install Docker
   hosts: elastic
   roles:
     - Docker
