@@ -6,7 +6,7 @@
 - name: Move elasticsearch.yml
   template:
     src: templates/elasticsearch.yml
-    dst: /usr/share/elasticsearch/conf/elasticsearch.yml
+    dest: /usr/share/elasticsearch/conf/elasticsearch.yml
 
 - name: Run Elasticsearch Docker
   docker_container:
