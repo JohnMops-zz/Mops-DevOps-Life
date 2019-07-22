@@ -12,7 +12,7 @@
       raw: (apt-get update && apt-get -y upgrade)
 
     - name: Install Python 2
-      raw: test -e /usr/bin/python || (apt-get update && apt-get install -y python && apt-get install pip)
+      raw: test -e /usr/bin/python || (apt-get update && apt-get install -y python && apt-get install python-pip)
       
     - name: Install docker py
       raw: pip install docker-py
