@@ -2,5 +2,6 @@
 
 - name: Configure Host
   hosts: elastic
+  remote_user: root
   roles:
     - Docker
