@@ -3,7 +3,7 @@
 - name: Deploy ES and Kibana in 2 Docker containers
   docker_service:
     definition:
-      version: "3"
+      version: "2"
       services:
         elasticsearch:
           image: "docker.elastic.co/elasticsearch/elasticsearch:6.5.4"
