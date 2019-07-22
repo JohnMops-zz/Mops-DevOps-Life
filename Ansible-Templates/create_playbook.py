@@ -86,7 +86,7 @@ def create_playbook(location):
 
     # Create the playbook skeleton
     print("Creating playbook directories")
-    os.mkdir(location, 0755)
+    os.mkdir(location)#, 0755)
     for d in dirs_to_create:
         os.mkdir(os.path.join(location, d))#, 0755)
 
