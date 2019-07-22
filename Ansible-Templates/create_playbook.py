@@ -88,7 +88,7 @@ def create_playbook(location):
     print("Creating playbook directories")
     os.mkdir(location, 0755)
     for d in dirs_to_create:
-        os.mkdir(os.path.join(location, d), 0755)
+        os.mkdir(os.path.join(location, d))#, 0755)
 
     print("Creating playbook files")
     for f in files_to_create:
@@ -116,7 +116,7 @@ def create_role(location, rolename):
     # Create the role skeleton
     print("Creating role directories")
     for d in dirs_to_create:
-        os.mkdir(os.path.join(location, d), 0755)
+        os.mkdir(os.path.join(location, d))#, 0755)
 
     print("Creating role files")
     for f in files_to_create:
