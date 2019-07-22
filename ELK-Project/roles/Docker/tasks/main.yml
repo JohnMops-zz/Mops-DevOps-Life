@@ -22,8 +22,8 @@
     file:
       path: opt/elasticsearch/data
       state: directory
-      owner: 1000
-      group: 1000
+      owner: elasticsearch
+      group: elasticsearch
       mode: '0777'
  
  
