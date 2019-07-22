@@ -1,1 +1,2 @@
+cluster.initial_master_nodes: ["3.17.56.160"]
 discovery.type=single-node
