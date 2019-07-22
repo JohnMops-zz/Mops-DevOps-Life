@@ -13,7 +13,7 @@
 - name: Run Elasticsearch Docker
   docker_container:
     name: elasticsearch
-    image: elasticsearch:7.2.0
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.2.0
     state: started
     volumes:
       - /opt/elasticsearch/data:/usr/share/elasticsearch/data
@@ -35,7 +35,7 @@
 - name: Run Kibana Docker
   docker_container:
     name: kibana
-    image: kibana:7.2.0
+    image: docker.elastic.co/kibana/kibana:7.2.0
     state: started
     volumes:
       - /opt/kibana/kibana.yml:/usr/share/kibana/config/kibana.yml
