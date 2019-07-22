@@ -2,6 +2,11 @@
 
 - name: Increase memory
   raw: sysctl -w vm.max_map_count=262144
+  
+- name: Move elasticsearch.yml
+  template:
+    src: templates/elasticsearch.yml
+    dst: /usr/share/elasticsearch/conf/elasticsearch.yml
 
 - name: Run Elasticsearch Docker
   docker_container:
@@ -14,7 +19,7 @@
      - "9200:9200"
      - "9300:9300"
      
-- name: Move Needed Files To Host
+- name: Move Kibana.yml
   template:
     src: templates/kibana.yml
     dest: /opt/kibana/kibana.yml
