@@ -26,7 +26,7 @@ pipeline {
                     sh "sed -i 's/host_ip/${targetIP}/g' group_vars/all"
                     sh 'cat hosts'
                     sh 'cat group_vars/all'
-                    sh "ansible-playbook -i hosts --private-key=/var/jenkins_home/ansible/my.pem roles/Configure/tasks/main.yml -- limist elastic"
+                    sh "ansible-playbook -i hosts --private-key=/var/jenkins_home/ansible/my.pem roles/Configure/tasks/main.yml -- limit elastic"
                     sh "ansible-playbook -i hosts --private-key=/var/jenkins_home/ansible/my.pem playbook.yml --limit  elastic"
                     
                 }
