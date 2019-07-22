@@ -1,2 +1,4 @@
-discovery.seed_hosts: {{ elk_host }}:9200
+cluster.initial_master_nodes[0]=3.17.56.160
+discovery.type=single-node
+discovery.seed_hosts: 3.17.56.160:9200
 network.host: {{ elk_host }}
