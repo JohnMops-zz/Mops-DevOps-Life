@@ -8,9 +8,6 @@
     name: elasticsearch
     image: elasticsearch:7.2.0
     state: started
-    volumes:
-      - /opt/elasticsearch/data:/usr/share/elasticsearch/data/
-      - /opt/elasticsearch/config/:/usr/share/elasticsearch/config/
     ports:
      - "9200:9200"
      - "9300:9300"
@@ -21,8 +18,6 @@
     name: kibana
     image: kibana:7.2.0
     state: started
-    volumes:
-      - /opt/kibana/:/usr/share/kibana/config/
     links:
       - elasticsearch:elasticsearch
     ports:
