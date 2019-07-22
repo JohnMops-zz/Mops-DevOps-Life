@@ -20,12 +20,12 @@
       
   - name: Create Folder DB
     file:
-      path: opt/elasticsearch/data
+      path: /opt/elasticsearch/data
       state: directory
       
   - name: Create Folder conf
     file:
-      path: opt/elasticsearch/conf
+      path: /opt/elasticsearch/conf
       state: directory
       
   - name: Change Owner
