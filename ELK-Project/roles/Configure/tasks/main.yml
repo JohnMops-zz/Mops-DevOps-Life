@@ -17,6 +17,9 @@
     - name: Install docker py
       raw: apt-get -y install python-pip
       
+    - name: Install docker compose
+      raw: pip install docker-compose
+      
     - name: Install docker py
       raw: pip install docker-py
 
