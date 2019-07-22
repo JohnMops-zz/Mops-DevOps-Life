@@ -6,7 +6,7 @@
 - name: Move elasticsearch.yml
   template:
     src: templates/elasticsearch.yml
-    dest: opt/elasticsearch/conf/elasticsearch.yml
+    dest: /opt/elasticsearch/conf/elasticsearch.yml
     owner: root
     group: root
 
