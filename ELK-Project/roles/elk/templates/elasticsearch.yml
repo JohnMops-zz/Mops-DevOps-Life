@@ -1,2 +1,2 @@
-node.name: ${HOSTNAME}
+discovery.seed_hosts: {{ elk_host }}:9200
 network.host: {{ elk_host }}
