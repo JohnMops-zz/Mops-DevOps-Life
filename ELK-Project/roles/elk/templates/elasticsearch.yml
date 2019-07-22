@@ -1,12 +1,12 @@
-#discovery.seed_hosts: elasticsearch
-#node.name: "elasticsearch"
-#cluster.initial_master_nodes: elasticsearch
-#node.master: true
+discovery.seed_hosts: elasticsearch
+node.name: "elasticsearch"
+cluster.initial_master_nodes: elasticsearch
+node.master: true
 #bootstrap.mlockall: true
-#network.host: localhost
+network.host: localhost
 
 
-discovery.type: single-node
+#discovery.type: single-node
 
 
 
