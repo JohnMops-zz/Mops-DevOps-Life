@@ -39,8 +39,8 @@
     hostname: kibana
     image: kibana:6.5.4
     state: started
-    volumes:
-      - /opt/kibana/:/usr/share/kibana/config/
+    #volumes:
+      #- /opt/kibana/:/usr/share/kibana/config/
     ports:
       - "5601:5601"
     links:
