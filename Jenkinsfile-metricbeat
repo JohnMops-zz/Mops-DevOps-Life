@@ -21,8 +21,15 @@ pipeline {
                                 string(defaultValue: '0.0.0.0',
                                        description: 'ip address',
                                        name: 'IP')])
+                elk_ip = input(
+                            id: 'userInput', message: 'ip add',
+                            parameters: [
+                                string(defaultValue: '0.0.0.0',
+                                       description: 'ip address',
+                                       name: 'IP')])
                     
                     sh "sed -i 's/agent_ip/${targetIP}/g' hosts"
+                    sh "sed -i 's/HOST_IP/${elk_ip}/g' hosts"
                     sh "sed -i 's/metric_ip/${targetIP}/g' group_vars/all"
                     sh 'cat hosts'
                     sh 'cat group_vars/all'
