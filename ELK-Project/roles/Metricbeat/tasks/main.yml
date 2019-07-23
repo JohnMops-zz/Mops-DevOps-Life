@@ -27,4 +27,4 @@
 
     
     - name: Start metricbeat
-      raw: ./metricbeat -e
+      raw: /opt/metricbeat/metricbeat_sys -e
