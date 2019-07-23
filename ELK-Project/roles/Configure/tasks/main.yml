@@ -20,8 +20,8 @@
     - name: Install docker py
       raw: pip install docker-py
       
-    - name: Install docker compose
-      raw: pip install docker-compose
+    #- name: Install docker compose
+      #raw: pip install docker-compose
 
     - name: COMMON | Set environment
       blockinfile:
