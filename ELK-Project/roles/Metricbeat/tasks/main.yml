@@ -29,6 +29,17 @@
   
     - name: Unzip Metricbeat
       raw: tar -C /opt/metricbeat -xzvf metricbeat-6.5.4-linux-x86_64.tar.gz
+      
+    - name: Template a file to /etc/files.conf
+      template:
+        src: /templates/metricbeat.yml
+        dest: /opt/metricbeat/metricbeat-6.5.4-linux-x86_64/metricbeat.yml
+        owner: root
+        group: root
+        mode: '0777'
    
-    - name: Start metricbeat
-      raw: cd /opt/metricbeat/metricbeat-6.5.4-linux-x86_64 && ./metricbeat -e
+    - service:
+        name: metricbeat
+        enabled: yes
+        state: started
+    
