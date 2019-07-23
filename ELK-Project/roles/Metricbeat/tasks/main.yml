@@ -15,10 +15,7 @@
 - name: Rename Metricbeat file
   raw: mv /opt/metricbeat/metricbeat-6.5.4-linux-x86_64 /opt/metricbeat/metricbeat_sys
   
-- name: Copy metricbeat-yml
-  templates:
-    src: /templates/metricbeat.yml
-    dest: /opt/metricbeat/metricbeat_sys/metricbeat.yml
+
     
 - name: Start metricbeat
   raw: ./metricbeat -e
