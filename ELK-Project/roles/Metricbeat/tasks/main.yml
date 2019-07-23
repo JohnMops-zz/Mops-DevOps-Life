@@ -21,7 +21,7 @@
         recurse: yes
         owner: root
         group: root
-        mode: '0777'
+        mode: u+rwx
       
 
     - name: Download Metricbeat
