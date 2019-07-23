@@ -1,5 +1,8 @@
 ---
 
+- name: Installing metricbeat
+  hosts: '{{ slave_ip }}'
+
 - name: Create Folder for Metricbeat
   file:
     path: /opt/metricbeat
