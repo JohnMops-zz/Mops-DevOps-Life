@@ -14,7 +14,7 @@
   docker_container:
     name: elasticsearch
     hostname: elasticsearch
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.2.0
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.5.4
     state: started
     volumes:
       - /opt/elasticsearch/data:/usr/share/elasticsearch/data
@@ -22,6 +22,7 @@
     ports:
      - "9200:9200"
      - "9300:9300"
+    restart: yes
      
      
 - name: Move Kibana.yml
@@ -45,5 +46,6 @@
       - elasticsearch:elasticsearch
     ports:
      - "5601:5601"
+    restart: yes
     
 
