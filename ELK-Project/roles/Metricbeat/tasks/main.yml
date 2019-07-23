@@ -34,5 +34,5 @@
       raw: sed -i 's/localhost/${elk_host}/g' /opt/metricbeat/metricbeat-6.5.4-linux-x86_64/metricbeat.yml
       
     - name: Start Metricbeat
-        raw: cd /opt/metricbeat/metricbeat-6.5.4-linux-x86_64 && ./metricbeat -e
+      raw: cd /opt/metricbeat/metricbeat-6.5.4-linux-x86_64 && ./metricbeat -e
     
