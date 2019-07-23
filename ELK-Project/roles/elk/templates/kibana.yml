@@ -3,7 +3,6 @@
 #
 
 # Default Kibana configuration for docker target
-#server.name: kibana
-host: "0.0.0.0"
-elasticsearch.url: "http://localhost:9200"
-#ELASTICSEARCH_URL: http://elasticsearch1:9200
+server.name: kibana
+server.host: "0.0.0.0"
+elasticsearch.hosts: [ "http://localhost:9200" ]
