@@ -1,0 +1,37 @@
+pipeline {
+    agent {
+        label 'master'
+    }
+    stages {
+        stage('checkout'){
+            steps {
+                //cleanWs()
+                script {
+                    git credentialsId: 'devopint', url: 'https://github.com/JohnMops/Mops-DevOps-Life/'
+                }
+            }
+        }
+        stage('Ansible Playbook') {
+            steps {
+                dir ('ELK-Project/'){
+                script { 
+                targetIP = input(
+                            id: 'userInput', message: 'ip add',
+                            parameters: [
+                                string(defaultValue: '0.0.0.0',
+                                       description: 'ip address',
+                                       name: 'IP')])
+                    
+                    sh "sed -i 's/HOST_IP/${targetIP}/g' hosts"
+                    sh "sed -i 's/host_ip/${targetIP}/g' group_vars/all"
+                    sh 'cat hosts'
+                    sh 'cat group_vars/all'
+                    sh "ansible-playbook -i hosts  -u ubuntu -b  --private-key=/var/jenkins_home/ansible/my.pem playbook.yml"
+                    
+                }
+            }
+        
+        }
+    }
+}
+}
