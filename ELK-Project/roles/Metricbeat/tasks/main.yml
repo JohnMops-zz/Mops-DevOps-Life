@@ -28,7 +28,7 @@
 
     
   - name: Start metricbeat
-   raw: ./metricbeat -e
+    raw: ./metricbeat -e
     
   
   
