@@ -1,3 +1,5 @@
+---
+
 - name: Install metricbeat
   hosts: agent
   roles:
