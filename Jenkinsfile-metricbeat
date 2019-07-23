@@ -26,8 +26,8 @@ pipeline {
                     sh "sed -i 's/metric_ip/${targetIP}/g' group_vars/all"
                     sh 'cat hosts'
                     sh 'cat group_vars/all'
-                    sh "ansible-playbook -i agent  -u ubuntu -b  --private-key=/var/jenkins_home/ansible/my.pem roles/Configure/tasks/main-metric.yml"
-                    sh "ansible-playbook -i agent  -u ubuntu -b  --private-key=/var/jenkins_home/ansible/my.pem roles/Metricbeat/tasks/main.yml"
+                    sh "ansible-playbook -i agent --limit agent  -u ubuntu -b  --private-key=/var/jenkins_home/ansible/my.pem roles/Configure/tasks/main-metric.yml"
+                    //sh "ansible-playbook -i agent  -u ubuntu -b  --private-key=/var/jenkins_home/ansible/my.pem roles/Metricbeat/tasks/main.yml"
                     //sh "ansible-playbook -i '$targetIP,'  -u ubuntu -b  --private-key=/var/jenkins_home/ansible/my.pem playbook-metric.yml"
                     
                 }
