@@ -18,14 +18,14 @@ pipeline {
                 targetIP = input(
                             id: 'userInput', message: 'ip add',
                             parameters: [
-                                string(defaultValue: '0.0.0.0',
-                                       description: 'ip address',
+                                string(defaultValue: '18.217.249.158',
+                                       description: 'Metricbeat Host IP',
                                        name: 'IP')])
                 elk_ip = input(
                             id: 'userInput', message: 'ip add',
                             parameters: [
-                                string(defaultValue: '0.0.0.0',
-                                       description: 'ip address',
+                                string(defaultValue: '18.224.18.255',
+                                       description: 'ELK Host IP',
                                        name: 'IP')])
                     
                     sh "sed -i 's/agent_ip/${targetIP}/g' hosts"
