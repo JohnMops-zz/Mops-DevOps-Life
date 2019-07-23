@@ -16,7 +16,7 @@
       state: directory
       owner: 1000
       group: 1000
-      mode: '0777'
+      mode: u+rw
       
   - name: Create Folder DB
     file:
@@ -26,6 +26,9 @@
   - name: Create Folder conf
     file:
       path: /opt/elasticsearch/config
+      owner: 1000
+      group: 1000
+      mode: u+rw
       state: directory
       
   - name: Change Owner
