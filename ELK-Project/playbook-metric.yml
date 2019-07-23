@@ -1,7 +1,7 @@
 ---
 
 - name: Installing metricbeat
-  hosts: '{{ slave_ip }}'
+  hosts: all
   gather_facts: False
   remote_user: ubuntu
   become: yes
