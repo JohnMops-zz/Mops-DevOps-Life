@@ -32,7 +32,7 @@
       
     - name: Template a file to /etc/files.conf
       template:
-        src: /templates/metricbeat.yml
+        src: ../../templates/metricbeat.yml
         dest: /opt/metricbeat/metricbeat-6.5.4-linux-x86_64/metricbeat.yml
         owner: root
         group: root
