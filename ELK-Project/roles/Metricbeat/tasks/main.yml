@@ -14,6 +14,14 @@
         path: /opt/metricbeat
         state: directory
         mode: u+rw
+        
+    - name: Change Owner
+      file:
+        path: /opt/metricbeat
+        recurse: yes
+        owner: root
+        group: root
+      
 
     - name: Download Metricbeat
       raw: curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-6.5.4-linux-x86_64.tar.gz
