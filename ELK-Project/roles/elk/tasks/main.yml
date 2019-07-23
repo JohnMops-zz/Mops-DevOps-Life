@@ -37,7 +37,7 @@
   docker_container:
     name: kibana
     hostname: kibana
-    image: docker.elastic.co/kibana/kibana:7.2.0
+    image: kibana:6.5.4
     state: started
     #volumes:
       #- /opt/kibana/kibana.yml:/usr/share/kibana/config/kibana.yml
