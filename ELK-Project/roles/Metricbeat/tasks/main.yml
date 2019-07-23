@@ -11,13 +11,13 @@
 
     - name: Create Folder for Metricbeat
       file:
-        path: /opt/metricbeat
+        path: /opt/metricbeat/metricbeat-6.5.4-linux-x86_64
         state: directory
         mode: u+rw
         
     - name: Change Owner
       file:
-        path: /opt/metricbeat/metricbeat-6.5.4-linux-x86_64/
+        path: /opt/metricbeat/metricbeat-6.5.4-linux-x86_64
         recurse: yes
         owner: root
         group: root
