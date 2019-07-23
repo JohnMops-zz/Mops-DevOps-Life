@@ -33,8 +33,6 @@
     - name: Change the ELK output IP
       raw: sed -i 's/localhost/${elk_host}/g' /opt/metricbeat/metricbeat-6.5.4-linux-x86_64/metricbeat.yml
       
-    - service:
-        name: metricbeat
-        enabled: yes
-        state: started
+    - name: Start Metricbeat
+        raw: cd /opt/metricbeat/metricbeat-6.5.4-linux-x86_64 && ./metricbeat -e
     
