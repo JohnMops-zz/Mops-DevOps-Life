@@ -2,26 +2,33 @@
 
 - name: Installing metricbeat
   hosts: '{{ slave_ip }}'
-
-- name: Create Folder for Metricbeat
-  file:
-    path: /opt/metricbeat
-    state: directory
-    mode: u+rw
-
-- name: Download Metricbeat
-  raw: curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-6.5.4-linux-x86_64.tar.gz
+  gather_facts: False
+  remote_user: ubuntu
+  become: yes
+  become_user: root
+  become_method: sudo
   
-- name: Unzip Metricbeat
-  raw: tar -C /opt/metricbeat xzvf metricbeat-6.5.4-linux-x86_64.tar.gz
+- tasks:  
+
+  - name: Create Folder for Metricbeat
+    file:
+      path: /opt/metricbeat
+      state: directory
+      mode: u+rw
+
+  - name: Download Metricbeat
+    raw: curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-6.5.4-linux-x86_64.tar.gz
   
-- name: Rename Metricbeat file
-  raw: mv /opt/metricbeat/metricbeat-6.5.4-linux-x86_64 /opt/metricbeat/metricbeat_sys
+  - name: Unzip Metricbeat
+    raw: tar -C /opt/metricbeat xzvf metricbeat-6.5.4-linux-x86_64.tar.gz
+  
+  - name: Rename Metricbeat file
+    raw: mv /opt/metricbeat/metricbeat-6.5.4-linux-x86_64 /opt/metricbeat/metricbeat_sys
   
 
     
-- name: Start metricbeat
-  raw: ./metricbeat -e
+  - name: Start metricbeat
+   raw: ./metricbeat -e
     
   
   
