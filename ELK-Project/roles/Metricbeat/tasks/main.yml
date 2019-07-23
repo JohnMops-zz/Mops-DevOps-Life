@@ -30,14 +30,9 @@
     - name: Unzip Metricbeat
       raw: tar -C /opt/metricbeat -xzvf metricbeat-6.5.4-linux-x86_64.tar.gz
       
-    - name: Template a file to /etc/files.conf
-      template:
-        src: ../../templates/metricbeat.yml
-        dest: /opt/metricbeat/metricbeat-6.5.4-linux-x86_64/metricbeat.yml
-        owner: root
-        group: root
-        mode: '0777'
-   
+    - name: Change the ELK output IP
+      raw: sed -i 's/localhost/${elk_host}/g' /opt/metricbeat/metricbeat-6.5.4-linux-x86_64/metricbeat.yml
+      
     - service:
         name: metricbeat
         enabled: yes
