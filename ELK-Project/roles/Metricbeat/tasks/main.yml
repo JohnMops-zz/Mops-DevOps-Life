@@ -28,11 +28,6 @@
   
     - name: Unzip Metricbeat
       raw: tar -C /opt/metricbeat -xzvf metricbeat-6.5.4-linux-x86_64.tar.gz
-  
-    - name: Rename Metricbeat file
-      raw: mv /opt/metricbeat/metricbeat-6.5.4-linux-x86_64 /opt/metricbeat/metricbeat_sys
-  
-
-    
+   
     - name: Start metricbeat
-      raw: /opt/metricbeat/metricbeat_sys -e
+      raw: /opt/metricbeat/metricbeat-6.5.4-linux-x86_64 -e
