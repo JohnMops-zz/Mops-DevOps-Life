@@ -1,12 +1,12 @@
 ---
 
-- name: Installing metricbeat
-  hosts: all
-  gather_facts: False
-  remote_user: ubuntu
-  become: yes
-  become_user: root
-  become_method: sudo
+
+  - hosts: all
+    gather_facts: False
+    remote_user: ubuntu
+    become: yes
+    become_user: root
+    become_method: sudo
   
 - tasks:  
 
