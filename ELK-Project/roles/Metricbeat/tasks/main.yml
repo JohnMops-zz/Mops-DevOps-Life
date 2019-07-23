@@ -8,31 +8,16 @@
   become_method: sudo
   
   tasks:  
-
-    - name: Create Folder for Metricbeat
-      file:
-        path: /opt/metricbeat/metricbeat-6.5.4-linux-x86_64
-        state: directory
-        mode: u+rwx
-        
-    - name: Change Owner
-      file:
-        path: /opt/metricbeat/metricbeat-6.5.4-linux-x86_64
-        recurse: yes
-        owner: root
-        group: root
-        mode: u+rwx
       
-
     - name: Download Metricbeat
-      raw: curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-6.5.4-linux-x86_64.tar.gz
+      raw: curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-6.7.2-amd64.deb
   
-    - name: Unzip Metricbeat
-      raw: tar -C /opt/metricbeat -xzvf metricbeat-6.5.4-linux-x86_64.tar.gz
+    - name: DPKG Metricbeat
+      raw: dpkg -i metricbeat-6.7.2-amd64.deb
       
     - name: Change the ELK output IP
-      raw: sed -i 's/localhost:9200/{{ elk_host }}:9200/g' /opt/metricbeat/metricbeat-6.5.4-linux-x86_64/metricbeat.yml
+      raw: sed -i 's/localhost:9200/{{ elk_host }}:9200/g' /etc/metricbeat/metricbeat.yml
       
     - name: Start Metricbeat
-      raw: cd /opt/metricbeat/metricbeat-6.5.4-linux-x86_64 && ./metricbeat -e
+      raw: service metricbeat start
     
