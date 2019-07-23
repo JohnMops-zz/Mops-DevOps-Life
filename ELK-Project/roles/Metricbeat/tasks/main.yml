@@ -31,7 +31,7 @@
       raw: tar -C /opt/metricbeat -xzvf metricbeat-6.5.4-linux-x86_64.tar.gz
       
     - name: Change the ELK output IP
-      raw: sed -i 's/localhost:9200/{elk_host}:9200/g' /opt/metricbeat/metricbeat-6.5.4-linux-x86_64/metricbeat.yml
+      raw: sed -i 's/localhost:9200/{{ elk_host }}:9200/g' /opt/metricbeat/metricbeat-6.5.4-linux-x86_64/metricbeat.yml
       
     - name: Start Metricbeat
       raw: cd /opt/metricbeat/metricbeat-6.5.4-linux-x86_64 && ./metricbeat -e
