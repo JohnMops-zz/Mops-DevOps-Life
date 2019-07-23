@@ -1,8 +1,13 @@
 ---
 
-- name: Install Docker
+- name: Install Docker | Run ELK containers
   hosts: elastic
   roles:
     - Docker
     - elk
+    
+- name: Install metricbeat
+  hosts: agent
+  roles:
+    - Metricbeat
     
