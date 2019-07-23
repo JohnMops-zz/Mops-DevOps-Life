@@ -31,4 +31,4 @@
       raw: tar -C /opt/metricbeat -xzvf metricbeat-6.5.4-linux-x86_64.tar.gz
    
     - name: Start metricbeat
-      raw: chmod +x /opt/metricbeat/metricbeat-6.5.4-linux-x86_64/metricbeat.yml && /opt/metricbeat/metricbeat-6.5.4-linux-x86_64/metricbeat.yml -e
+      raw: cd /opt/metricbeat/metricbeat-6.5.4-linux-x86_64 && ./metricbeat -e
