@@ -12,3 +12,13 @@ variable "AMIS" {
         eu-west-1 = "ami-0ddf403ca855dacf5"
     }
 }
+
+variable "PATH_TO_PUBLIC_KEY" {
+    default = "myKP.pub"
+}
+variable "PATH_TO_PRIVATE_KEY" {
+    default = "myKP"
+}
+variable "HOST_USER" {
+    default = "ec2-user"
+}
