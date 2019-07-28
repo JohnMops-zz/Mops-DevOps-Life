@@ -11,7 +11,7 @@ This are the projects I am working on as part of the DevOps life I have chosen.
 2. Install everything needed for a flask service to run
 3. Copying template files for the flask app to the chosen host
 3. Monitors changes in the repository and runs a job if something changed
-via a webhook
+via a Webhook
 
 
 
