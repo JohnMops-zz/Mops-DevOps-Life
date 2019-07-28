@@ -20,5 +20,5 @@ variable "PATH_TO_PRIVATE_KEY" {
     default = "myKP"
 }
 variable "HOST_USER" {
-    default = "ec2-user"
+    default = "ubuntu"
 }
