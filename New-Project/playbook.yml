@@ -6,16 +6,15 @@
     - setup:
     
   tasks:
-
     - name: Install Docker 
       become: yes
-      roles:
-        - Docker
+      - include_role:
+          name: Docker
 
     - name: Install Role
       become: yes
-      roles:
-        - roleIn
+      - include_role:
+          name: roleIn
     
 
 
