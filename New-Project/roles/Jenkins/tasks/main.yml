@@ -4,14 +4,13 @@
   file:
     path: "{{ path }}"
     state: directory
-    owner: 1000
-    group: 1000
-    mode: u+rw
 
-
-
+- name: Change Owner
+    file:
+      path: "{{ path }}"
+      owner: 1000
+      group: 1000
     
-
 - name: Start Jenkins-Ansible container
   docker_container:
     name: jen
