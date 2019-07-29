@@ -9,7 +9,8 @@
 
 
 - name: Install Docker
-  roles: "{{ docker, become: yes}}"
+  hosts: all 
+  roles: "{{ Docker, become: yes}}"
 
 - name: Install Role
   role:
