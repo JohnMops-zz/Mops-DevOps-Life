@@ -8,7 +8,7 @@
   tasks:
    - name: Install common roles
      role:
-      - "{{ Docker, become: yes }}"
+      - Docker
 
 
 
