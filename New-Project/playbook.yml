@@ -5,11 +5,7 @@
     - raw: sudo apt -qy update&& sudo apt install -qy python3&& sudo apt install -qy python&& sudo apt install -qy python-pip&& sudo pip install docker-py
     - setup:
 
-
-
-
-- name: Install Docker
-  hosts: all 
+- name: Install Docker 
   become: yes
   roles:
     - Docker
