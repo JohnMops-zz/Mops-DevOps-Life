@@ -26,7 +26,7 @@ pipeline {
   id: 'userInput', message: 'Choose Role',
   parameters: [choice(name: 'Role', choices: "Docker\nES\nJenkins", description: 'What role do you want to run?')]
 )
-                    sh "echo host_key_checking = false >> /etc/ansible/ansible.cfg"
+                    
                     sh "sed -i 's/host/${targetIP}/g' hosts"
                     sh "sed -i 's/roleIn/${roleIn}/g' playbook.yml"
                     sh 'cat hosts'
