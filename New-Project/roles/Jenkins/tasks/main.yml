@@ -20,4 +20,4 @@
       - "8080:8080"
       - "50000:50000"
     volumes:
-      - "{{ path }}":/var/jenkins_home
+      - '{{ path }}':/var/jenkins_home
