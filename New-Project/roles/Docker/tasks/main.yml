@@ -1,4 +1,7 @@
 ---
+
+  - name: Update Cache
+    raw: sudo apt update -qy
   
   - name: Install docker
     apt:
