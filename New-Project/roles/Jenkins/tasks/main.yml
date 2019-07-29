@@ -2,12 +2,12 @@
 
 - name: Create Jenkins folder on the Host
   file:
-    path: /opt/jenkins
+    path: "{{ path }}"
     state: directory
 
 - name: Change owner of the Jenkins folder
   file:
-    path: opt/jenkins
+    path: "{{ path }}"
     owner: 1000
     group: 1000
 
@@ -20,4 +20,4 @@
       - "8080:8080"
       - "50000:50000"
     volumes:
-      - /opt/jenkins:/var/jenkins_home
+      - "{{ path }}":/var/jenkins_home
