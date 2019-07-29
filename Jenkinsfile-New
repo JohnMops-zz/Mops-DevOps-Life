@@ -25,7 +25,7 @@ pipeline {
                      message 'Choose Role'
                      ok 'Proceed'
                      parameters {
-                     choice choices: ['Docker', 'ES', 'Config', 'Web', 'DB', 'Jenkins'], description: '', name: 'Role']
+                     choice choices: ['Docker', 'ES', 'Config', 'Web', 'DB', 'Jenkins'], description: '', name: 'Role'
   }
 }
 
