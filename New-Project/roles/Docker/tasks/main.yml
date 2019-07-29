@@ -1,11 +1,10 @@
 ---
 
-  - name: Update Cache
-    raw: sudo apt update -qy
-  
   - name: Install docker
     apt:
-      name: "docker.io"
-      update_cache: yes
-        
-  
+      name: docker.io
+      state: present
+  - name: Start docker service
+    service:
+      name: docker
+      state: started
