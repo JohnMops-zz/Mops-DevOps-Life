@@ -4,14 +4,12 @@
   file:
     path: "{{ path }}"
     state: directory
-    mode: u+rw
-
-- name: Change owner of the Jenkins folder
-  file:
-    path: "{{ path }}"
-    recurse: yes
     owner: 1000
     group: 1000
+    mode: u+rw
+
+
+
     
 
 - name: Start Jenkins-Ansible container
