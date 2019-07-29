@@ -1,0 +1,23 @@
+---
+
+- name: Create Jenkins folder on the Host
+  file:
+    path: /opt/jenkins
+    state: directory
+
+- name: Change owner of the Jenkins folder
+  file:
+    path: opt/jenkins
+    owner: 1000
+    group: 1000
+
+- name: Start Jenkins-Ansible container
+  docker_container:
+    name: jen
+    image: johnmops/jen-ansible:lts
+    state: started
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - /opt/jenkins:/var/jenkins_home
