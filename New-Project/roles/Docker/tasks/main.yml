@@ -5,7 +5,7 @@
   
   - name: Install docker
     apt:
-      name: docker.io
-      state: present
+      name: "docker.io"
+      update_cache: yes
         
   
