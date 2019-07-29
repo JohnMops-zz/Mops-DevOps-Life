@@ -4,16 +4,18 @@
   pre_tasks:
     - raw: sudo apt -qy update&& sudo apt install -qy python3&& sudo apt install -qy python&& sudo apt install -qy python-pip&& sudo pip install docker-py
     - setup:
+    
+  tasks:
 
-- name: Install Docker 
-  become: yes
-  roles:
-    - Docker
+  - name: Install Docker 
+    become: yes
+    roles:
+      - Docker
 
-- name: Install Role
-  become: yes
-  roles:
-    - roleIn
+  - name: Install Role
+    become: yes
+    roles:
+      - roleIn
     
 
 
