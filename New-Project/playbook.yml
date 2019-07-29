@@ -1,5 +1,6 @@
 ---
 - name: Pre Configure
+  become: yes
   hosts: all
   roles:
     - Config
@@ -7,11 +8,13 @@
   
   
 - name: Install Docker
+  become: yes
   hosts: hosts
   roles:
     - Docker
 
 - name : Install a role
+  become: yes
   hosts: all
   roles:
     - roleIn
