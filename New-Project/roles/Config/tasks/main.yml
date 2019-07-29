@@ -1,0 +1,13 @@
+---
+
+- name: Update Packages
+  raw: (apt-get update && apt-get -y upgrade)
+
+- name: Install Python 2
+  raw: test -e /usr/bin/python || (apt-get update && apt-get install -y python)
+    
+- name: Install docker py
+  raw: apt-get -y install python-pip
+      
+- name: Install docker py
+  raw: pip install docker-py
