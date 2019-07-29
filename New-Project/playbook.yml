@@ -6,7 +6,12 @@
   
   
   
-- name: Install metricbeat
+- name: Install Docker
   hosts: hosts
   roles:
     - Docker
+
+- name : Install a role
+  hosts: all
+  roles:
+    - roleIn
