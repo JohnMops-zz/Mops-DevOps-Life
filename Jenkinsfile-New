@@ -23,11 +23,9 @@ pipeline {
                                        name: 'IP')])
                                        
                 role = input (
-  message 'Please choose a Role'
-  ok 'Confirm'
-  parameters [
-    choice choices: ['Docker', 'Web', 'DB', 'Jenkins', 'Config', 'ES'], description: '', name: 'Roles'
-  ]
+  id: 'userInput', message: 'Choose Role',
+  ok 'Confirm',
+   parameters: [choice(name: 'Role', choices: "Docker\nES\nJenkins", description: 'What role do you want to run?')]
 )
                     sh "sed -i 's/host/${targetIP}/g' hosts"
                     sh 'cat hosts'
