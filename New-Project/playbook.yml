@@ -6,16 +6,9 @@
     - setup:
     
   tasks:
-    - name: Install Docker 
-      become: yes
-      - include_role:
-          name: Docker
-
-    - name: Install Role
-      become: yes
-      - include_role:
-          name: roleIn
-    
+   - name: Install common roles
+     role:
+      - "{{ Docker, become: yes }}"
 
 
 
