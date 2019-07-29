@@ -15,8 +15,10 @@
     - Docker
 
 - name: Install Role
+  become: yes
   roles:
-    - "{{ {{ role }}, become: yes }}"
+    - "{{ role }}"
+    
 
 
 
