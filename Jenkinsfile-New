@@ -15,12 +15,14 @@ pipeline {
             steps {
                 dir ('New-Project/'){
                 script {
-                targetIP = input(
-                            id: 'userInput', message: 'ip add',
-                            parameters: [
-                                string(defaultValue: '0.0.0.0',
-                                       description: 'ip address',
-                                       name: 'IP')])
+                targetIP = input {
+  message 'Please choose a Role'
+  ok 'Confirm'
+  parameters {
+    choice choices: ['Docker', 'Web', 'DB', 'Jenkins', 'Config', 'ES'], description: '', name: 'Roles'
+  }
+}
+
                  role = input message: 'Please choose a Role',
                         ok: 'confirm',
                         parameters: [choice(name: '', choices: ["Docker",Web",Jenkins",ES",DB","Config"], description: '')]
