@@ -4,7 +4,8 @@
   pre_tasks:
     - raw: sudo apt -qy update&& sudo apt install -qy python3&& sudo apt install -qy python&& sudo apt install -qy python-pip&& sudo pip install docker-py
     - setup:
-    
+  
+- hosts: all
   tasks:
    - name: Install common roles
      role:
