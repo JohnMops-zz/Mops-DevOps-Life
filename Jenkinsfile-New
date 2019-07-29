@@ -21,14 +21,9 @@ pipeline {
                                 string(defaultValue: '0.0.0.0',
                                        description: 'ip address',
                                        name: 'IP')])
-                 role = input {
-                     message 'Choose Role'
-                     ok 'Proceed'
-                     parameters {
-                     choice choices: ['Docker', 'ES', 'Config', 'Web', 'DB', 'Jenkins'], description: '', name: 'Role'
-  }
-}
-
+                 role = input message: 'Please choose a Role',
+                        ok: 'confirm',
+                        parameters: [choice(name: '', choices: "Docker,Web,Jenkins,ES,DB,Config", description: '')]
                     sh "sed -i 's/host/${targetIP}/g' hosts"
                     sh 'cat hosts'
                     sh 'cat group_vars/all'
