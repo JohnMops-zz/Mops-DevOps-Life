@@ -8,8 +8,8 @@
 - name: Change Owner
   file:
     path: "{{ path }}"
-    owner: 1000
-    group: 1000
+    owner: 0
+    group: 0
     
 - name: Start Jenkins-Ansible container
   docker_container:
