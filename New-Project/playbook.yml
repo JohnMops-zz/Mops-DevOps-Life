@@ -7,15 +7,15 @@
     
   tasks:
 
-  - name: Install Docker 
-    become: yes
-    roles:
-      - Docker
+    - name: Install Docker 
+      become: yes
+      roles:
+        - Docker
 
-  - name: Install Role
-    become: yes
-    roles:
-      - roleIn
+    - name: Install Role
+      become: yes
+      roles:
+        - roleIn
     
 
 
