@@ -1,0 +1,33 @@
+---
+
+- name: Increase memory
+  raw: sysctl -w vm.max_map_count=262144
+
+- name: Create ES folder
+  file:
+    path: {{ item }}
+  with_items:
+    - /opt/elasticsearch-{{ es_version }}/data
+    - /opt/elasticsearch-{{ es_version }}/config
+
+
+- name: Move elasticsearch.yml
+  template:
+    src: templates/elasticsearch.yml
+    dest: /opt/elasticsearch/config/elasticsearch.yml
+    owner: 1000
+    group: 1000
+
+- name: Run Elasticsearch Docker
+  docker_container:
+    name: elasticsearch
+    hostname: elasticsearch
+    image: elasticsearch:{{ es_version }}
+    state: started
+    volumes:
+      - /opt/elasticsearch-{{ es_version }}/data:/usr/share/elasticsearch/data
+      - /opt/elasticsearch-{{ es_version }}/config:/usr/share/elasticsearch/config
+    ports:
+     - "9200:9200"
+     - "9300:9300"
+    #restart: yes

@@ -1,1 +1,2 @@
 path: opt/jenkins_home/
+es_version: "6.5.4"
