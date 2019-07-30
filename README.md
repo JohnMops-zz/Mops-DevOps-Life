@@ -30,3 +30,12 @@ Will keep working and building this up as I go.
 2. Run Metricbeat on a chosen host and point it to the Elasticsearch host
 
 
+###New-Project###
+
+1. Let's you choose a host 
+3. Let's you choose which Role to run on the chosen host via a menue in Jenkins job
+4. Run individuals roles 
+5. Connects between the relevant services (e.g. Elastichsearch with Kibana and Metricbeat)
+6. Universal and can be used anywhere
+
+
