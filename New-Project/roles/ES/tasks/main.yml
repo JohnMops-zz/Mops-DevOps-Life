@@ -15,11 +15,11 @@
     - /opt/elasticsearch-{{ es_version }}/config
     
 - name: Change Owner
-    file:
-      path: /opt/elasticsearch-{{ es_version }}/config
-      recurse: yes
-      owner: 1000
-      group: 1000
+  file:
+    path: /opt/elasticsearch-{{ es_version }}/config
+    recurse: yes
+    owner: 1000
+    group: 1000
     
 - name: Move elasticsearch.yml
   template:
