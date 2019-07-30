@@ -54,6 +54,14 @@
     dest: /opt/elasticsearch-{{ es_version }}/config/jvm.options
     owner: 1001
     group: elasticsearch
+    
+- name: Move log4j2.properties templates
+  template:
+    src: log4j2.properties
+    dest: /opt/elasticsearch-{{ es_version }}/config/log4j2.properties
+    owner: 1001
+    group: elasticsearch
+
 
 - name: Run Elasticsearch Docker
   docker_container:
