@@ -7,11 +7,17 @@
   group:
     name: elasticsearch
     state: present
+    
+- name: Add the user 'es' with a specific uid and a primary group of 'elasticsearch'
+  user:
+    name: es
+    uid: 1001
+    group: elasticsearch
 
 - name: Create ES folder
   file:
     path: "{{ item }}"
-    owner: root
+    owner: 1001
     group: elasticsearch
     state: directory
     mode: +rw
@@ -23,14 +29,14 @@
   file:
     path: /opt/elasticsearch-{{ es_version }}/config/
     recurse: yes
-    owner: root
+    owner: 1001
     group: elasticsearch
     
 - name: Move elasticsearch.yml
   template:
     src: templates/elasticsearch.yml
     dest: /opt/elasticsearch-{{ es_version }}/config/elasticsearch.yml
-    owner: root
+    owner: 1001
     group: elasticsearch
 
 - name: Run Elasticsearch Docker
