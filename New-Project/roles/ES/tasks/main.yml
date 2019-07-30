@@ -6,9 +6,9 @@
 - name: Create ES folder
   file:
     path: "{{ item }}"
-    state: directory
     owner: elasticsearch
     group: elasticsearch
+    state: directory
     mode: +rw
   with_items:
     - /opt/elasticsearch-{{ es_version }}/data
