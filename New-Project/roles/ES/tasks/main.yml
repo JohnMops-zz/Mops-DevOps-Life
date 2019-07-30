@@ -20,7 +20,7 @@
     owner: 1001
     group: elasticsearch
     state: directory
-    mode: +rw
+    mode: "0777"
   with_items:
     - /opt/elasticsearch-{{ es_version }}/data
     - /opt/elasticsearch-{{ es_version }}/config
