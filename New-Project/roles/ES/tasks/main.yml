@@ -25,9 +25,17 @@
     - /opt/elasticsearch-{{ es_version }}/data
     - /opt/elasticsearch-{{ es_version }}/config
     
-- name: Change Owner
+- name: Change Owner config
   file:
-    path: /opt/elasticsearch-{{ es_version }}/config/
+    path: /opt/elasticsearch-{{ es_version }}/config
+    recurse: yes
+    mode: "0777"
+    owner: 1001
+    group: elasticsearch
+    
+- name: Change Owner data 
+  file:
+    path: /opt/elasticsearch-{{ es_version }}/data
     recurse: yes
     mode: "0777"
     owner: 1001
@@ -54,8 +62,8 @@
     image: docker.elastic.co/elasticsearch/elasticsearch:{{ es_version }}
     state: started
     volumes:
-      - /opt/elasticsearch-{{ es_version }}/data/:/usr/share/elasticsearch/data/
-      - /opt/elasticsearch-{{ es_version }}/config/:/usr/share/elasticsearch/config/
+      - /opt/elasticsearch-{{ es_version }}/data:/usr/share/elasticsearch/data
+      - /opt/elasticsearch-{{ es_version }}/config:/usr/share/elasticsearch/config
     ports:
      - "9200:9200"
      - "9300:9300"
