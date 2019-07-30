@@ -2,5 +2,5 @@
 
 - name: Terraform Apply
     - terraform:
-        project_path: C:\Users\evgeni.biriukov\gitHub\Mops-DevOps-Life\New-Project\Terraform
+        project_path: ./Terraform
         state: present
