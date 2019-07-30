@@ -2,10 +2,6 @@
 
 - name: Terraform Apply
     - terraform:
-<<<<<<< HEAD
         project_path: ./Terraform
         state: present
-=======
-        project_path: /Terraform
-        state: present
->>>>>>> f56dde8db454054e1f4f49f7f21f1b7233754797
+
