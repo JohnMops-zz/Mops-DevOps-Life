@@ -33,12 +33,15 @@
     owner: 1001
     group: elasticsearch
     
-- name: Move elasticsearch.yml
+- name: Move elasticsearch.yml templates
   template:
-    src: templates/elasticsearch.yml
+    src: "{{ item }}"
     dest: /opt/elasticsearch-{{ es_version }}/config/elasticsearch.yml
     owner: 1001
     group: elasticsearch
+  with_items: 
+    - elasticsearch.yml
+    - jvm.options
 
 - name: Run Elasticsearch Docker
   docker_container:
