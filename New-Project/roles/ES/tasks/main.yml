@@ -36,7 +36,7 @@
 - name: Move elasticsearch.yml templates
   template:
     src: "{{ item }}"
-    dest: /opt/elasticsearch-{{ es_version }}/config/elasticsearch.yml
+    dest: /opt/elasticsearch-{{ es_version }}/config/
     owner: 1001
     group: elasticsearch
   with_items: 
