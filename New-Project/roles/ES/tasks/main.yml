@@ -51,7 +51,7 @@
   docker_container:
     name: elasticsearch
     hostname: elasticsearch
-    image: elasticsearch:{{ es_version }}
+    image: docker.elastic.co/elasticsearch/elasticsearch:{{ es_version }}
     state: started
     volumes:
       - /opt/elasticsearch-{{ es_version }}/data/:/usr/share/elasticsearch/data/
