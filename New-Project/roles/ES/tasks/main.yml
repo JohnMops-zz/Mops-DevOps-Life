@@ -29,6 +29,7 @@
   file:
     path: /opt/elasticsearch-{{ es_version }}/config/
     recurse: yes
+    mode: "0777"
     owner: 1001
     group: elasticsearch
     
