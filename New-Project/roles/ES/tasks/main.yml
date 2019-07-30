@@ -5,10 +5,10 @@
 
 - name: Create ES folder
   file:
-    path: {{ item }}
+    path: "{{ item }}"
   with_items:
-    - /opt/elasticsearch-{{ es_version }}/data
-    - /opt/elasticsearch-{{ es_version }}/config
+    - "/opt/elasticsearch-{{ es_version }}/data"
+    - "/opt/elasticsearch-{{ es_version }}/config"
 
 
 - name: Move elasticsearch.yml
