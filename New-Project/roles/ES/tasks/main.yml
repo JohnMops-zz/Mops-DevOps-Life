@@ -7,9 +7,9 @@
   file:
     path: "{{ item }}"
     state: directory
-    owner: 1000
-    group: 1000
-    mode: u+rw
+    owner: root
+    group: root
+    mode: +rw
   with_items:
     - /opt/elasticsearch-{{ es_version }}/data
     - /opt/elasticsearch-{{ es_version }}/config
@@ -18,15 +18,15 @@
   file:
     path: /opt/elasticsearch-{{ es_version }}/config
     recurse: yes
-    owner: 1000
-    group: 1000
+    owner: root
+    group: root
     
 - name: Move elasticsearch.yml
   template:
     src: templates/elasticsearch.yml
     dest: /opt/elasticsearch-{{ es_version }}/config/elasticsearch.yml
-    owner: 1000
-    group: 1000
+    owner: root
+    group: root
 
 - name: Run Elasticsearch Docker
   docker_container:
