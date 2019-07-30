@@ -32,7 +32,7 @@
     hostname: kibana
     image: docker.elastic.co/kibana/kibana:{{ es_version }}
     state: started
-     links:
+    links:
       - "elasticsearch"
     volumes:
       - /opt/kibana-{{ es_version }}:/usr/share/kibana/config
