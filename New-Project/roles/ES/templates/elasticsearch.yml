@@ -1,10 +1,2 @@
-#discovery.seed_hosts: elasticsearch
-#node.name: "elasticsearch"
-#cluster.initial_master_nodes: elasticsearch
-node.master: true
-#bootstrap.mlockall: true
-network.host: localhost
-#network.publish_host: 18.221.168.144
-
-
-discovery.type: single-node
+cluster.name: "docker-cluster"
+network.host: 0.0.0.0
