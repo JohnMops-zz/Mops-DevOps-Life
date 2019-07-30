@@ -1,3 +1,4 @@
 "path": "opt/jenkins_home/"
 "es_version": "6.7.2"
 "kb_version": "6.7.2"
+"elk_host": host_ip
