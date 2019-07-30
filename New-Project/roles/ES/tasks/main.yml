@@ -15,8 +15,8 @@
   template:
     src: templates/elasticsearch.yml
     dest: /opt/elasticsearch-{{ es_version }}/config/elasticsearch.yml
-    owner: 1000
-    group: 1000
+    owner: root
+    group: root
 
 - name: Run Elasticsearch Docker
   docker_container:
