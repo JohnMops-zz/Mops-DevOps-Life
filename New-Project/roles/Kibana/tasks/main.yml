@@ -1,0 +1,41 @@
+---
+
+- name: Ensure group "kibana" group exists
+  group:
+    name: kibana
+    state: present
+
+- name: Add the user 'kb' with a specific uid and a primary group of 'kibana'
+  user:
+    name: es
+    uid: 1002
+    group: elasticsearch
+
+- name: Create Kiabana folder
+  file:
+    path: /opt/kibana-{{ kb_version }}
+    state: directory
+    owner: 1002
+    group: elasticsearch
+    mode: "0777"
+
+- name: Move elasticsearch.yml templates
+  template:
+    src: kibana.yml
+    dest: /opt/kibana-{{ es_version }}/kibana.yml
+    owner: 1002
+    group: kibana
+
+- name: Run Kibana Docker
+  docker_container:
+    name: kibana
+    hostname: kibana
+    image: kibana:{{ kb_version }}
+    state: started
+    volumes:
+      - /opt/kibana-{{ kb_version }}:/usr/share/kibana/config
+    ports:
+     - "5601:5601"
+    links:
+      - "elasticsearch"
+    restart: yes
