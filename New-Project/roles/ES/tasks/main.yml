@@ -10,6 +10,13 @@
   with_items:
     - /opt/elasticsearch-{{ es_version }}/data
     - /opt/elasticsearch-{{ es_version }}/config
+    
+- name: Move elasticsearch.yml
+  template:
+    src: templates/elasticsearch.yml
+    dest: /opt/elasticsearch-{{ es_version }}/config/elasticsearch.yml
+    owner: 1000
+    group: 1000
 
 - name: Run Elasticsearch Docker
   docker_container:
@@ -25,9 +32,4 @@
      - "9300:9300"
     #restart: yes
     
-- name: Move elasticsearch.yml
-  template:
-    src: templates/elasticsearch.yml
-    dest: /opt/elasticsearch/config/elasticsearch.yml
-    owner: 1000
-    group: 1000
+
