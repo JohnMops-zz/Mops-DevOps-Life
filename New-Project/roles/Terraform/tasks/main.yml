@@ -1,6 +1,6 @@
 ---
 
-- name: Terraform Apply
+
 - terraform:
     project_path: ./Terraform
     state: present
