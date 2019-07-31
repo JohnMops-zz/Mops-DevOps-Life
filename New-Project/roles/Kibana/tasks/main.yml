@@ -7,7 +7,7 @@
 
 - name: Add the user 'kb' with a specific uid and a primary group of 'kibana'
   user:
-    name: es
+    name: kb
     uid: 1002
     group: elasticsearch
 
