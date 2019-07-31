@@ -9,14 +9,14 @@
   user:
     name: kb
     uid: 1002
-    group: elasticsearch
+    group: kibana
 
 - name: Create Kiabana folder
   file:
     path: /opt/kibana-{{ es_version }}
     state: directory
     owner: 1002
-    group: elasticsearch
+    group: kibana
     mode: "0777"
 
 - name: Move elasticsearch.yml templates
