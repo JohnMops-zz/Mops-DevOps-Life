@@ -1,10 +1,10 @@
 ---
 
 - name: Download Metricbeat
-  raw: curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-6.7.2-amd64.deb
+  raw: curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-{{ es_version }}-amd64.deb
 
 - name: DPKG Metricbeat
-  raw: dpkg -i metricbeat-6.7.2-amd64.deb
+  raw: dpkg -i metricbeat-{{ es_version }}-amd64.deb
 
 - name: Move metricbeat.yml templates
   template:
