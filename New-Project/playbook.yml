@@ -17,4 +17,4 @@
   become: yes
   hosts: default
   roles:
-    - roleIn
+    - "{{ role }}"
