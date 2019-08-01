@@ -36,6 +36,13 @@
     - logstash.yml
     - pipelines.yml
 
+- name: Move logstash.conf templates
+  template:
+    src: logstash.conf
+    dest: "{{ lg_path }}"-{{ es_version }}/pipelines
+    owner: 1003
+    group: logstash
+
 - name: Run Logstash Docker
   docker_container:
     name: logstash
