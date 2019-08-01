@@ -26,4 +26,17 @@
     owner: 1003
     group: logstash
 
-
+- name: Run Kibana Docker
+  docker_container:
+    name: kibana
+    hostname: kibana
+    image: docker.elastic.co/logstash/logstash:{{ es_version }}
+    state: started
+    links:
+      - "elasticsearch"
+    volumes:
+      - /opt/logstash-{{ es_version }}/logstash.yml:/usr/share/logstash/config/logstash.yml
+    ports:
+     - "5044:5044"
+     - "9600:9600"
+     - "9700:9700"

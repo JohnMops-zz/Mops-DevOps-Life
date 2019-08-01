@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42282056-37db-467a-bc47-b89ec16e2713" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/New-Project/roles/Logstash/templates/logstash.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New-Project/roles/Logstash/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/New-Project/roles/Logstash/tasks/main.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,22 +25,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/New-Project/roles/Kibana/tasks/main.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" lean-forward="true" selection-start-line="2" selection-end-line="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/New-Project/roles/Logstash/tasks/main.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="663">
+              <caret line="39" column="18" lean-forward="true" selection-start-line="28" selection-end-line="39" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/New-Project/roles/Logstash/tasks/main.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="714">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/New-Project/roles/Logstash/templates/logstash.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -114,12 +114,12 @@
         <option value="$PROJECT_DIR$/New-Project/roles/Metric/tasks/main.yml" />
         <option value="$PROJECT_DIR$/New-Project/roles/Kibana/tasks/main.yml" />
         <option value="$PROJECT_DIR$/New-Project/roles/Nginx/tasks/main.yml" />
-        <option value="$PROJECT_DIR$/New-Project/roles/Logstash/tasks/main.yml" />
         <option value="$PROJECT_DIR$/New-Project/roles/Logstash/templates/logstash.yml" />
+        <option value="$PROJECT_DIR$/New-Project/roles/Logstash/tasks/main.yml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="2552" />
     <option name="y" value="-8" />
     <option name="width" value="2576" />
@@ -239,14 +239,6 @@
               <item name="Mops-DevOps-Life" type="462c0819:PsiDirectoryNode" />
               <item name="New-Project" type="462c0819:PsiDirectoryNode" />
               <item name="roles" type="462c0819:PsiDirectoryNode" />
-              <item name="Logstash" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Mops-DevOps-Life" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Mops-DevOps-Life" type="462c0819:PsiDirectoryNode" />
-              <item name="New-Project" type="462c0819:PsiDirectoryNode" />
-              <item name="roles" type="462c0819:PsiDirectoryNode" />
               <item name="Metric" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -322,6 +314,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="2552" y="-8" width="2576" height="1416" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24940899" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -546,24 +539,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/New-Project/roles/Logstash/templates/logstash.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/New-Project/roles/Kibana/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" lean-forward="true" selection-start-line="2" selection-end-line="27" />
+        <state relative-caret-position="663">
+          <caret line="39" column="18" lean-forward="true" selection-start-line="28" selection-end-line="39" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/New-Project/roles/Logstash/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/New-Project/roles/Logstash/templates/logstash.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        <state relative-caret-position="714">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>
