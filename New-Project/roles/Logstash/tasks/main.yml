@@ -39,7 +39,7 @@
 - name: Move logstash.conf templates
   template:
     src: logstash.conf
-    dest: "{{ lg_path }}"-{{ es_version }}/pipelines
+    dest: "{{ lg_path }}-{{ es_version }}/pipelines"
     owner: 1003
     group: logstash
 
