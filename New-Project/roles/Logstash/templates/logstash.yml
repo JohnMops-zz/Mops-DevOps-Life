@@ -1,0 +1,2 @@
+http.host: "{{ elk_host }}"
+xpack.monitoring.elasticsearch.url: http://{{ elk_host }}:9200

@@ -1,0 +1,29 @@
+---
+
+- name: Ensure group "logstash" group exists
+  group:
+    name: logstash
+    state: present
+
+- name: Add the user 'lg' with a specific uid and a primary group of 'kibana'
+  user:
+    name: lg
+    uid: 1003
+    group: logstash
+
+- name: Create Logstash folder
+  file:
+    path: /opt/logstash-{{ es_version }}
+    state: directory
+    owner: 1003
+    group: logstash
+    mode: "0777"
+
+- name: Move logstash.yml templates
+  template:
+    src: logstash.yml
+    dest: /opt/logstash-{{ es_version }}/logstash.yml
+    owner: 1003
+    group: logstash
+
+
