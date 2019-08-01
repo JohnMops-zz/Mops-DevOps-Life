@@ -22,12 +22,16 @@
     group: logstash
     mode: "0777"
 
-- name: Move logstash.yml templates
+- name: Move log4j2.properties templates
   template:
-    src: logstash.yml
-    dest: /opt/logstash-{{ es_version }}/logstash.yml
-    owner: 1003
-    group: logstash
+    src: "{{ item }}"
+    dest: /opt/logstash-{{ es_version }}/{{ item }}
+    owner: 1001
+    group: elasticsearch
+  with_items:
+    - log4j2.properties
+    - jvm.options
+    - logstash.yml
 
 - name: Run Logstash Docker
   docker_container:
@@ -38,7 +42,7 @@
     links:
       - "elasticsearch"
     volumes:
-      - /opt/logstash-{{ es_version }}/logstash.yml:/usr/share/logstash/config/logstash.yml
+      - /opt/logstash-{{ es_version }}:/usr/share/logstash/config
     ports:
      - "5044:5044"
      - "9600:9600"
