@@ -21,8 +21,8 @@
     owner: 1003
     group: logstash
   with_items:
-    - "{{ lg_path }}"-{{ es_version }}
-    - "{{ lg_path }}"-{{ es_version }}/pipelines
+    - "{{ lg_path }}-{{ es_version }}"
+    - "{{ lg_path }}-{{ es_version }}/pipelines"
 
 - name: Move log4j2.properties templates
   template:
