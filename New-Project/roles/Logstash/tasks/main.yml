@@ -40,8 +40,8 @@
     hostname: logstash
     image: docker.elastic.co/logstash/logstash:{{ es_version }}
     state: started
-    links:
-      - "elasticsearch"
+    #links:
+      #- "elasticsearch"
     volumes:
       - /opt/logstash-{{ es_version }}:/usr/share/logstash/config
     ports:
