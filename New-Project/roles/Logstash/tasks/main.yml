@@ -20,7 +20,9 @@
     state: directory
     owner: 1003
     group: logstash
-    mode: "0777"
+  with_items:
+    - "{{ lg_path }}"-{{ es_version }}
+    - "{{ lg_path }}"-{{ es_version }}/pipelines
 
 - name: Move log4j2.properties templates
   template:
@@ -43,7 +45,8 @@
     links:
       - "elasticsearch"
     volumes:
-      - /opt/logstash-{{ es_version }}:/usr/share/logstash/config
+      - /{{ lg_path }}-{{ es_version }}:/usr/share/logstash/config
+      - /{{ lg_path }}-{{ es_version }}/pipelines:/usr/share/logstash/pipeline
     ports:
      - "5044:5044"
      - "9600:9600"

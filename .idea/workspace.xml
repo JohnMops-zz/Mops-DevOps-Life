@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42282056-37db-467a-bc47-b89ec16e2713" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/New-Project/roles/Logstash/templates/logstash.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New-Project/group_vars/all" beforeDir="false" afterPath="$PROJECT_DIR$/New-Project/group_vars/all" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/New-Project/roles/Logstash/tasks/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/New-Project/roles/Logstash/tasks/main.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/New-Project/roles/Logstash/tasks/main.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="42" column="10" lean-forward="true" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+            <state relative-caret-position="527">
+              <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -40,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/New-Project/group_vars/all">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -55,19 +57,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/New-Project/roles/Logstash/templates/log4j2.properties">
+        <entry file="file://$PROJECT_DIR$/New-Project/roles/Logstash/templates/logstash.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="14" selection-start-column="14" selection-end-column="14" />
+              <caret column="26" selection-start-column="26" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/New-Project/roles/Logstash/templates/logstash.yml">
+        <entry file="file://$PROJECT_DIR$/New-Project/roles/Logstash/templates/logstash.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="26" selection-start-column="26" selection-end-column="26" />
+            <state relative-caret-position="170">
+              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -115,7 +117,6 @@
         <option value="$PROJECT_DIR$/New-Project/roles/ES/templates/elasticsearch.yml" />
         <option value="$PROJECT_DIR$/New-Project/roles/Kibana/templates/kibana.yml" />
         <option value="$PROJECT_DIR$/New-Project/playbook.yml" />
-        <option value="$PROJECT_DIR$/New-Project/group_vars/all" />
         <option value="$PROJECT_DIR$/Jenkinsfile-New" />
         <option value="$PROJECT_DIR$/New-Project/Terraform/terraform.tfvars" />
         <option value="$PROJECT_DIR$/New-Project/Terraform/instance.tf" />
@@ -130,11 +131,13 @@
         <option value="$PROJECT_DIR$/New-Project/roles/Logstash/templates/logstash.yml" />
         <option value="$PROJECT_DIR$/New-Project/roles/ES/tasks/main.yml" />
         <option value="$PROJECT_DIR$/New-Project/roles/Logstash/templates/jvm.options" />
+        <option value="$PROJECT_DIR$/New-Project/roles/Logstash/templates/logstash.conf" />
+        <option value="$PROJECT_DIR$/New-Project/group_vars/all" />
         <option value="$PROJECT_DIR$/New-Project/roles/Logstash/tasks/main.yml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="2552" />
     <option name="y" value="-8" />
     <option name="width" value="2576" />
@@ -350,7 +353,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2552" y="-8" width="2576" height="1416" extended-state="6" />
+    <frame x="2552" y="-8" width="2576" height="1416" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24940899" />
@@ -499,13 +502,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Terraform/terraform.tfvars" />
-    <entry file="file://$PROJECT_DIR$/New-Project/group_vars/all">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Jenkinsfile-New-Project" />
     <entry file="file://$PROJECT_DIR$/New-Project/ansible.cfg">
       <provider selected="true" editor-type-id="text-editor" />
@@ -570,13 +566,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/New-Project/roles/Logstash/templates/logstash.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/New-Project/roles/Kibana/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
@@ -608,10 +597,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/New-Project/roles/Logstash/templates/logstash.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/New-Project/roles/Logstash/templates/log4j2.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/New-Project/roles/Logstash/templates/logstash.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/New-Project/group_vars/all">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/New-Project/roles/Logstash/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="10" lean-forward="true" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+        <state relative-caret-position="527">
+          <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
         </state>
       </provider>
     </entry>
