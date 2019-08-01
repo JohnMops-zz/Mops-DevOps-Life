@@ -26,12 +26,13 @@
   template:
     src: "{{ item }}"
     dest: /opt/logstash-{{ es_version }}/{{ item }}
-    owner: 1001
-    group: elasticsearch
+    owner: 1003
+    group: logstash
   with_items:
     - log4j2.properties
     - jvm.options
     - logstash.yml
+    - pipelines.yml
 
 - name: Run Logstash Docker
   docker_container:
