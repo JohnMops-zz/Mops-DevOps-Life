@@ -25,10 +25,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/New-Project/roles/Logstash/tasks/main.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+            <state relative-caret-position="714">
+              <caret line="42" column="10" lean-forward="true" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/New-Project/roles/ES/templates/jvm.options">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -41,19 +46,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/New-Project/roles/Logstash/templates/pipelines.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="45" lean-forward="true" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/New-Project/roles/Logstash/templates/jvm.options">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+            <state relative-caret-position="723">
+              <caret line="62" column="5" selection-start-line="62" selection-start-column="3" selection-end-line="62" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -133,6 +129,7 @@
         <option value="$PROJECT_DIR$/New-Project/roles/Nginx/tasks/main.yml" />
         <option value="$PROJECT_DIR$/New-Project/roles/Logstash/templates/logstash.yml" />
         <option value="$PROJECT_DIR$/New-Project/roles/ES/tasks/main.yml" />
+        <option value="$PROJECT_DIR$/New-Project/roles/Logstash/templates/jvm.options" />
         <option value="$PROJECT_DIR$/New-Project/roles/Logstash/tasks/main.yml" />
       </list>
     </option>
@@ -242,6 +239,14 @@
               <item name="roles" type="462c0819:PsiDirectoryNode" />
               <item name="Kibana" type="462c0819:PsiDirectoryNode" />
               <item name="tasks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mops-DevOps-Life" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mops-DevOps-Life" type="462c0819:PsiDirectoryNode" />
+              <item name="New-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="roles" type="462c0819:PsiDirectoryNode" />
+              <item name="Kibana" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Mops-DevOps-Life" type="b2602c69:ProjectViewProjectNode" />
@@ -586,17 +591,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/New-Project/roles/Logstash/tasks/main.yml">
+    <entry file="file://$PROJECT_DIR$/New-Project/roles/Logstash/templates/pipelines.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="43" column="7" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+        <state relative-caret-position="85">
+          <caret line="5" column="45" lean-forward="true" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/New-Project/roles/ES/templates/jvm.options">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/New-Project/roles/Logstash/templates/jvm.options">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+        <state relative-caret-position="723">
+          <caret line="62" column="5" selection-start-line="62" selection-start-column="3" selection-end-line="62" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/New-Project/roles/Logstash/tasks/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="10" lean-forward="true" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
         </state>
       </provider>
     </entry>
