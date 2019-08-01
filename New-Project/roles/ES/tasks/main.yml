@@ -59,12 +59,13 @@
   template:
     src: "{{ item }}"
     dest: /opt/elasticsearch-{{ es_version }}/config/{{ item }}
+    owner: 1001
+    group: elasticsearch
   with_items:
     - log4j2.properties
     - jvm.options
     - elasticsearch.yml
-    owner: 1001
-    group: elasticsearch
+    
 
 
 - name: Run Elasticsearch Docker

@@ -26,7 +26,7 @@
     owner: 1003
     group: logstash
 
-- name: Run Kibana Docker
+- name: Run Logstash Docker
   docker_container:
     name: kibana
     hostname: kibana
