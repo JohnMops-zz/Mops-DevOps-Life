@@ -65,7 +65,7 @@
     - log4j2.properties
     - jvm.options
     - elasticsearch.yml
-    
+
 
 
 - name: Run Elasticsearch Docker

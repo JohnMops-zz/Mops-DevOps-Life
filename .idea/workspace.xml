@@ -79,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/New-Project/roles/ES/tasks/main.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
+            <state relative-caret-position="884">
+              <caret line="67" selection-start-line="67" selection-end-line="67" />
             </state>
           </provider>
         </entry>
@@ -99,7 +99,6 @@
         <option value="$PROJECT_DIR$/New-Project/roles/Jenkins/tasks/main.yml" />
         <option value="$PROJECT_DIR$/New-Project/hosts" />
         <option value="$PROJECT_DIR$/New-Project/roles/ES/templates/elasticsearch.yml" />
-        <option value="$PROJECT_DIR$/New-Project/roles/ES/tasks/main.yml" />
         <option value="$PROJECT_DIR$/New-Project/roles/Kibana/templates/kibana.yml" />
         <option value="$PROJECT_DIR$/New-Project/playbook.yml" />
         <option value="$PROJECT_DIR$/New-Project/group_vars/all" />
@@ -115,6 +114,7 @@
         <option value="$PROJECT_DIR$/New-Project/roles/Kibana/tasks/main.yml" />
         <option value="$PROJECT_DIR$/New-Project/roles/Nginx/tasks/main.yml" />
         <option value="$PROJECT_DIR$/New-Project/roles/Logstash/templates/logstash.yml" />
+        <option value="$PROJECT_DIR$/New-Project/roles/ES/tasks/main.yml" />
         <option value="$PROJECT_DIR$/New-Project/roles/Logstash/tasks/main.yml" />
       </list>
     </option>
@@ -532,13 +532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/New-Project/roles/ES/tasks/main.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="41" column="24" selection-start-line="41" selection-start-column="24" selection-end-line="41" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/New-Project/roles/Logstash/templates/logstash.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -550,6 +543,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="39" column="18" lean-forward="true" selection-start-line="28" selection-end-line="39" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/New-Project/roles/ES/tasks/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
         </state>
       </provider>
     </entry>

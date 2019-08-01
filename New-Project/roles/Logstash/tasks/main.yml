@@ -28,8 +28,8 @@
 
 - name: Run Logstash Docker
   docker_container:
-    name: kibana
-    hostname: kibana
+    name: logstash
+    hostname: logstash
     image: docker.elastic.co/logstash/logstash:{{ es_version }}
     state: started
     links:
