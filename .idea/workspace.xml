@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42282056-37db-467a-bc47-b89ec16e2713" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/k8s/client-node-port.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s/client-pod.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,6 +22,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/New-Project/roles/Kibana/templates/kibana.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" lean-forward="true" selection-start-line="5" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/k8s/client-node-port.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -70,7 +77,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="2552" />
     <option name="y" value="-8" />
     <option name="width" value="2576" />
@@ -96,6 +103,32 @@
               <item name="Mops-DevOps-Life" type="b2602c69:ProjectViewProjectNode" />
               <item name="Mops-DevOps-Life" type="462c0819:PsiDirectoryNode" />
               <item name="k8s" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mops-DevOps-Life" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mops-DevOps-Life" type="462c0819:PsiDirectoryNode" />
+              <item name="New-Project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mops-DevOps-Life" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mops-DevOps-Life" type="462c0819:PsiDirectoryNode" />
+              <item name="New-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="roles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mops-DevOps-Life" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mops-DevOps-Life" type="462c0819:PsiDirectoryNode" />
+              <item name="New-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="roles" type="462c0819:PsiDirectoryNode" />
+              <item name="Kibana" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mops-DevOps-Life" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mops-DevOps-Life" type="462c0819:PsiDirectoryNode" />
+              <item name="New-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="roles" type="462c0819:PsiDirectoryNode" />
+              <item name="Kibana" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -166,7 +199,7 @@
     <frame x="2552" y="-8" width="2576" height="1416" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24940899" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24940899" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -176,7 +209,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.14107561" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.14107561" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
@@ -322,13 +355,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/New-Project/roles/Kibana/templates/kibana.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/New-Project/roles/ES/templates/log4j2.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -441,6 +467,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/k8s/client-node-port.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/k8s/client-pod.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -448,10 +481,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/k8s/client-node-port.yml">
+    <entry file="file://$PROJECT_DIR$/New-Project/roles/Kibana/templates/kibana.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="5" selection-end-line="8" />
         </state>
       </provider>
     </entry>
