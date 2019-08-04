@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42282056-37db-467a-bc47-b89ec16e2713" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/k8s/api-deploy.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/api-deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/api-config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/k8s-2/api-cluster.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/k8s-2/client-cluster.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/k8s-2/client-deploy.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/k8s-2/client-deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/k8s-2/client-config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/k8s-2/client-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/k8s-2/client-config.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,7 +17,7 @@
         <entry file="file://$PROJECT_DIR$/k8s/k8s-2/client-config.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="561">
-              <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+              <caret line="33" column="22" lean-forward="true" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -31,6 +27,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="595">
               <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/k8s/client-node-port.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -77,6 +82,7 @@
         <option value="$PROJECT_DIR$/k8s/k8s-2/api-cluster.yml" />
         <option value="$PROJECT_DIR$/k8s/k8s-2/client-deploy.yml" />
         <option value="$PROJECT_DIR$/k8s/api-deploy.yml" />
+        <option value="$PROJECT_DIR$/k8s/k8s-2/client-config.yml" />
       </list>
     </option>
   </component>
@@ -202,7 +208,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2552" y="-8" width="2576" height="1416" extended-state="0" />
+    <frame x="2552" y="-8" width="2576" height="1416" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17257683" />
@@ -505,13 +511,6 @@
     <entry file="file://$PROJECT_DIR$/k8s/k8s-2/ingress.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/k8s/client-node-port.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/k8s/k8s-2/client-cluster.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -533,10 +532,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/k8s/client-node-port.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/k8s/k8s-2/client-config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
-          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+          <caret line="33" column="22" lean-forward="true" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
         </state>
       </provider>
     </entry>

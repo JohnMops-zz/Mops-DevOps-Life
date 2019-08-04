@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: client-deploy
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       component: web
@@ -20,7 +20,7 @@ spec:
 
 ---
 
-#Connects the internal pods without access from the outside world.
+#Connects the internal pods without access from the outside world - clusterIP
 apiVersion: v1
 kind: Service
 metadata:
@@ -32,3 +32,18 @@ spec:
   ports:
     - port: 3000 #can be different
       targetPort: 3000
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: client-node-port
+spec:
+  type: NodePort
+  ports:
+    - port: 3000
+      targetPort: 8080
+      nodePort: 31515
+  selector:
+    component: web
