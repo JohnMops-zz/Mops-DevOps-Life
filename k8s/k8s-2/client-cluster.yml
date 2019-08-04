@@ -1,0 +1,13 @@
+#Connects the internal pods without access from the outside world.
+apiVersion: v1
+kind: Service
+metadata:
+  name: client-cluster
+spec:
+  type: ClusterIP
+  selector:
+    component: web
+  ports:
+    - port: 3000 #can be different
+      targetPort: 3000
+
