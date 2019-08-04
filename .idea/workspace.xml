@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="42282056-37db-467a-bc47-b89ec16e2713" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/k8s-2/client-deploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/k8s-2/client-deploy.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,7 +17,7 @@
         <entry file="file://$PROJECT_DIR$/k8s/k8s-2/client-deploy.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+              <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -68,8 +69,8 @@
         <option value="$PROJECT_DIR$/k8s/client-deploy.yml" />
         <option value="$PROJECT_DIR$/Ansible-Project/mops/roles/web/templates/app.py" />
         <option value="$PROJECT_DIR$/Ansible-Project/mops/roles/web/templates/flask.service" />
-        <option value="$PROJECT_DIR$/k8s/k8s-2/client-deploy.yml" />
         <option value="$PROJECT_DIR$/k8s/k8s-2/client-cluster.yml" />
+        <option value="$PROJECT_DIR$/k8s/k8s-2/client-deploy.yml" />
       </list>
     </option>
   </component>
@@ -519,7 +520,7 @@
     <entry file="file://$PROJECT_DIR$/k8s/k8s-2/client-deploy.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+          <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
         </state>
       </provider>
     </entry>
