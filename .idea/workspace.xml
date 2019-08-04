@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42282056-37db-467a-bc47-b89ec16e2713" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/k8s/k8s-2/client-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/k8s-2/client-config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,11 +21,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/k8s/k8s-2/client-config.yml">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/k8s/k8s-2/client-config-withVolumeClaim.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1071">
               <caret line="63" column="31" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/k8s/Useful Info/Kind list">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="986">
+              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
             </state>
           </provider>
         </entry>
@@ -43,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/k8s/k8s-2/jenkins-persistant-volume-claim.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -92,6 +101,7 @@
         <option value="$PROJECT_DIR$/k8s/api-deploy.yml" />
         <option value="$PROJECT_DIR$/k8s/k8s-2/jenkins-persistant-volume-claim.yml" />
         <option value="$PROJECT_DIR$/k8s/k8s-2/client-config.yml" />
+        <option value="$PROJECT_DIR$/k8s/Useful Info/Kind list" />
       </list>
     </option>
   </component>
@@ -145,6 +155,12 @@
               <item name="Mops-DevOps-Life" type="462c0819:PsiDirectoryNode" />
               <item name="k8s" type="462c0819:PsiDirectoryNode" />
               <item name="k8s-2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Mops-DevOps-Life" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Mops-DevOps-Life" type="462c0819:PsiDirectoryNode" />
+              <item name="k8s" type="462c0819:PsiDirectoryNode" />
+              <item name="Useful Info" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Mops-DevOps-Life" type="b2602c69:ProjectViewProjectNode" />
@@ -220,7 +236,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2552" y="-8" width="2576" height="1416" extended-state="1" />
+    <frame x="2552" y="-8" width="2576" height="1416" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17257683" />
@@ -268,9 +284,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Updated" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/New-Project/Terraform/vars.tf">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/New-Project/roles/Role1/tasks/main.yml" />
     <entry file="file://$PROJECT_DIR$/New-Project/Terraform/instance.tf">
       <provider selected="true" editor-type-id="text-editor">
@@ -540,7 +553,7 @@
     <entry file="file://$PROJECT_DIR$/k8s/k8s-2/jenkins-persistant-volume-claim.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -551,10 +564,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/k8s/k8s-2/client-config.yml">
+    <entry file="file://$PROJECT_DIR$/k8s/k8s-2/client-config-withVolumeClaim.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1071">
           <caret line="63" column="31" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/k8s/Useful Info/Kind list">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="986">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
         </state>
       </provider>
     </entry>
