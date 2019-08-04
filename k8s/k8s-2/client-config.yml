@@ -51,7 +51,7 @@ spec:
 ---
 
 apiVersion: v1
-kind: PersistantVolumeClaim #Not an actual volume but a claim that is going to be attached to a pod configuration
+kind: PersistentVolumeClaim #Not an actual volume but a claim that is going to be attached to a pod configuration
 metadata:
   name: jenkins-coulume-claim
 spec:

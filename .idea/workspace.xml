@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42282056-37db-467a-bc47-b89ec16e2713" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/k8s/k8s-2/jenkins-persistant-volume-claim.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/k8s/k8s-2/client-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/k8s-2/client-config.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/k8s/k8s-2/client-config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+            <state relative-caret-position="1071">
+              <caret line="63" column="31" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -44,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/k8s/k8s-2/jenkins-persistant-volume-claim.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="18" lean-forward="true" selection-end-line="9" selection-end-column="18" />
+              <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -96,7 +95,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="2552" />
     <option name="y" value="-8" />
     <option name="width" value="2576" />
@@ -221,7 +220,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2552" y="-8" width="2576" height="1416" extended-state="0" />
+    <frame x="2552" y="-8" width="2576" height="1416" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17257683" />
@@ -538,6 +537,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/k8s/k8s-2/jenkins-persistant-volume-claim.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/k8s/k8s-2/api-config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -545,17 +551,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/k8s/k8s-2/jenkins-persistant-volume-claim.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="18" lean-forward="true" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/k8s/k8s-2/client-config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+        <state relative-caret-position="1071">
+          <caret line="63" column="31" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="31" />
         </state>
       </provider>
     </entry>
