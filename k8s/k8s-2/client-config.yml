@@ -50,4 +50,15 @@ spec:
 
 ---
 
-apiVersion:
+apiVersion: v1
+kind: PersistantVolumeClaim #Not an actual volume but a claim that is going to be attached to a pod configuration
+metadata:
+  name: jenkins-coulume-claim
+spec:
+  accessModes: #a slice of a storage needs that meets those terms, has: ReadWriteOnce, ReadOnlyMany, ReadWriteMany referring to nodes access
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+
+#The pod config will ask for a already provisioned volume or for a dynamically provisioned one if the first does not exist
