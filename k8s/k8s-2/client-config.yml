@@ -17,3 +17,18 @@ spec:
           image: johnmops/jen-ansible:1.0
           ports:
             - containerPort: 3000
+
+---
+
+#Connects the internal pods without access from the outside world.
+apiVersion: v1
+kind: Service
+metadata:
+  name: client-cluster
+spec:
+  type: ClusterIP
+  selector:
+    component: web
+  ports:
+    - port: 3000 #can be different
+      targetPort: 3000
