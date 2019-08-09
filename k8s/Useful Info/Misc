@@ -1,0 +1,3 @@
+1. cert manager : certificate manager for k8s
+2. ingress - ngnix : the project to use for ingress service
+3. minikube dashboard
