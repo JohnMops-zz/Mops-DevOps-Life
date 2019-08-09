@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-service
+  annotations: #extra set of configurations around the inress service
+    kubernetes.io/ingress.class: # ngnix #waht projects to use
+    ngnix.ingress.kubernetes.io/rewrite-target: / #how the copy of ngnix behaves
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /
+            backend: 
+              serviceName: <clusterIP service name>
+              servicePort: 8080
+          - path:
+            backend: /api/
+              serviceName: <clusterIP service>
+              servicePort: 3000
+    
