@@ -1,0 +1,38 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-service
+  annotations: #extra set of configurations around the inress service
+    kubernetes.io/ingress.class: # ngnix #waht projects to use
+    ngnix.ingress.kubernetes.io/rewrite-target: /$1 #how the copy of ngnix behaves
+    certmanager.k8s.io/cluster-issuer: 'letsencrypt-prod' #issuer.yml
+    ngnix.ingress.kubernetes.io/ssl-redirect: 'true' #force SSL
+spec:
+  tls:
+    - hosts:
+        - <domain name>
+        - www.<domain name>
+      secretName: <secretName inside the certificate.yml>
+  rules:
+    - host: <domain name>
+      http:
+        paths:
+          - path: /?(.*)
+            backend: 
+              serviceName: <clusterIP service name>
+              servicePort: 8080
+          - path:
+            backend: /api/?(.*)
+              serviceName: <clusterIP service>
+              servicePort: 3000
+    - host: www.<domain name>
+      http:
+        paths:
+          - path: /?(.*)
+            backend: 
+              serviceName: <clusterIP service name>
+              servicePort: 8080
+          - path:
+            backend: /api/?(.*)
+              serviceName: <clusterIP service>
+              servicePort: 3000
