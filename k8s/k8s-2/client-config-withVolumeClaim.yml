@@ -12,12 +12,19 @@ spec:
       labels:
         component: web
     spec:
+      volumes:
+        - name: jenkins-storage
+          persistentColumeClaim:
+            claimName: jenkins-volume-claim #name of the claim if the configs are seperate
       containers:
         - name: client
           image: johnmops/jen-ansible:1.0
           ports:
             - containerPort: 3000
-
+          volumeMounts:
+            - name: jenkins-storage #go back to the spec section and find the storage 
+              mounPath: /var/jenkins_home #mount inside the container
+              subPath: jenkins this option will create a folder named jenkins inside the designated storage
 ---
 
 #Connects the internal pods without access from the outside world - clusterIP
@@ -53,7 +60,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim #Not an actual volume but a claim that is going to be attached to a pod configuration
 metadata:
-  name: jenkins-coulume-claim
+  name: jenkins-volume-claim
 spec:
   accessModes: #a slice of a storage needs that meets those terms, has: ReadWriteOnce, ReadOnlyMany, ReadWriteMany referring to nodes access
     - ReadWriteOnce
