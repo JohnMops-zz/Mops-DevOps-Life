@@ -4,17 +4,17 @@ metadata:
   name: ingress-service
   annotations: #extra set of configurations around the inress service
     kubernetes.io/ingress.class: # ngnix #waht projects to use
-    ngnix.ingress.kubernetes.io/rewrite-target: / #how the copy of ngnix behaves
+    ngnix.ingress.kubernetes.io/rewrite-target: /$1 #how the copy of ngnix behaves
 spec:
   rules:
     - http:
         paths:
-          - path: /
+          - path: /?(.*)
             backend: 
               serviceName: <clusterIP service name>
               servicePort: 8080
           - path:
-            backend: /api/
+            backend: /api/?(.*)
               serviceName: <clusterIP service>
               servicePort: 3000
     
