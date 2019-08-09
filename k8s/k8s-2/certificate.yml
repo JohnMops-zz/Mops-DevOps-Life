@@ -1,0 +1,21 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: Certificate
+metadata:
+  name: <domain name>-tls
+spec:
+  secretName: <domain name>
+  issuerRef:
+    name: <issuer.yml name>
+    kind: ClusterIssuer #also issuer.yml
+  commonName: <domain name>
+  dnsNames: #liost of all the domains that are associated with the certificate (SANs)
+    - <domain name>
+    - www.<domain name>
+  acme:
+    config:
+      - http01:
+          ingressClass: ngnix
+        domains: #domains that will be accessed by the verification process via lets encrypt
+          - <domain name>
+          - www.<domain name>
+          
