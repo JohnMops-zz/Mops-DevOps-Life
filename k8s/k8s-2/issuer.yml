@@ -1,0 +1,15 @@
+apiVersion: certmanager.k8s.io/v1alpha1
+kind: CLusterIssuer
+metadata
+  name: letsencrypt-prod
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: 'your email'
+    privateKeySecretRef: #related to communication between the pod and lets encrypt
+      name: letsencrypt-prod
+    http01: {} #use the process of obtaining the certificate with lets encrypt
+    
+      
+      
+  
