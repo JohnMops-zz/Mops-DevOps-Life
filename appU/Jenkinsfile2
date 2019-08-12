@@ -31,6 +31,10 @@ pipeline {
                                 string(defaultValue: '0.0.0.0',
                                        description: 'ip address',
                                        name: 'IP')])
+                                       roleIn = input (
+                id: 'userInput', message: 'Choose Role',
+                parameters: [choice(name: 'Role', choices: "Docker\nES\nJenkins\nKibana\nMetric\nTerraform\nLogstash\nBuild-Image", description: 'What role do you want to run?')]
+)
             dir ('./appU') {
               try {
                             sh 'python ExperimentTests.py'
