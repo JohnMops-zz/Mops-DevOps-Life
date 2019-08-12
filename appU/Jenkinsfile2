@@ -1,36 +1,51 @@
 pipeline {
-  options {
-      timeout(time: 30, unit: 'MINUTES')
+  options{
+    timeout(time:30, unit: 'MINUTES')
   }
     agent {
-        label 'master'
+      label 'master'
     }
     stages {
-        stage ('Checkout') {
-            steps {
-                script {
-                    checkout([$class: 'GitSCM', branches: [[name: '*/yuri']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/DevOpsINT/Course.git']]])
+      stage ('Checkout') {
+        steps {
+          deleteDir()
+            script {
+                    //git credentialsId: 'github', url: 'https://github.com/JohnMops/Mops-DevOps-Life/'
+                    checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/JohnMops/Mops-DevOps-Life']]])
                     CurrentVersion = sh script:"git tag | sort -r | head -1", returnStdout: true
                     CurrentVersion = CurrentVersion.trim()
                     nextVersion = CurrentVersion + 1
                     commitIDshort = sh script:"git rev-parse HEAD | cut -c1-10", returnStdout: true
                     BuildVersion = "${CurrentVersion}_${commitIDshort}"
-                }
             }
+        
         }
-        stage ('Unit Test') {
-            steps {
-                script {
-                    dir ('./appUT') {
-                        try {
+      
+      }
+      stage ('Unit Test') {
+        steps {
+          script {
+            dir (./appU) {
+              try {
                             sh 'python ExperimentTests.py'
                         } catch (err) {
-                            println("Unit Test failed for ${BuildVersion}")
+                          println("Unit Test failed for ${BuildVersion}")
                             currentBuild.result = 'UNSTABLE'
                         }
-                    }
-                }
+              
             }
+          }
         }
-    }
+      stage ('Some') {
+        steps {
+          script {
+            sh 'pwd'
+          }
+        }
+      }
+      }
+    } 
+  
+  
+  
 }
