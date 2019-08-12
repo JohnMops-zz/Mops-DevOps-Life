@@ -38,7 +38,8 @@ pipeline {
         }
         post {
                 success {
-                    sh 'echo $currentBuild.result'
+                    sh 'println("Unit Test failed for ${BuildVersion}")
+                            currentBuild.result = 'SUCCESS'
                 }
             }
         }
