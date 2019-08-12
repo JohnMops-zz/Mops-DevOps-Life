@@ -25,6 +25,12 @@ pipeline {
       stage ('Unit Test') {
         steps {
           script {
+          targetIP = input(
+                            id: 'userInput', message: 'ip add',
+                            parameters: [
+                                string(defaultValue: '0.0.0.0',
+                                       description: 'ip address',
+                                       name: 'IP')])
             dir ('./appU') {
               try {
                             sh 'python ExperimentTests.py'
@@ -38,8 +44,9 @@ pipeline {
         }
         post {
                 success {
-                    sh 'println("Unit Test failed for ${BuildVersion}")
-                            currentBuild.result = 'SUCCESS'
+                    dir (./New-Project) {
+                      sh "ansible-playbook -i hosts -u ubuntu -b  --extra-vars role=${roleIn} --private-key=/var/jenkins_home/ansible/work.pem playbook.yml"
+                    }
                 }
             }
         }
