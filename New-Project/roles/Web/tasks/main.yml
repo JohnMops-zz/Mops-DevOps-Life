@@ -1,5 +1,9 @@
 ---
 
+#- name: Log into DockerHub
+ # docker_login:
+ #   username: yourusername
+ #   password: yourpassword
 
   
 
