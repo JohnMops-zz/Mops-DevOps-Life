@@ -9,7 +9,7 @@ pipeline {
         stage ('Checkout') {
             steps {
                 script {
-                    checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/DevOpsINT/Course.git']]])
+                    checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/JohnMops/Mops-DevOps-Life']]])
                     CurrentVersion = sh script:"git tag | sort -r | head -1", returnStdout: true
                     CurrentVersion = CurrentVersion.trim()
                     nextVersion = CurrentVersion + 1
