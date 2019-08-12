@@ -30,6 +30,10 @@ pipeline {
                             println("Unit Test failed for ${BuildVersion}")
                             currentBuild.result = 'UNSTABLE'
                         }
+                      post {
+            success {
+              echo 'Build stage successful for ${BuildVersion}'
+            }
                     }
                 }
             }
