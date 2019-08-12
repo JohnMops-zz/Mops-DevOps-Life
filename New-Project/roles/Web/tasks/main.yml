@@ -7,7 +7,7 @@
 - name: Build an image and push it to a private repo
   docker_image:
     build:
-      path: ./opt/Mops/appU
+      path: ./opt/Mops/appU/Dockerfile
     name: johnmops/project
     tag: '{{ buildV }}'
     push: yes
