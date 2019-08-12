@@ -30,7 +30,7 @@ pipeline {
                           println("Unit Test failed for ${BuildVersion}")
                             currentBuild.result = 'UNSTABLE'
 }
-                      stage ('Image Build') {
+        stage ('Image Build') {
                         steps {
                           script {
                             sh 'docker build -t johnmops/project:${BuildVersion} .'
