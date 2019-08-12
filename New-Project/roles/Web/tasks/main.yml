@@ -9,6 +9,6 @@
     build:
       path: ./opt/Mops/Mops-DevOps-Life/appU
     name: johnmops/project
-    tag: '{{ buildv }}'
+    tag: '{{ buildV }}'
     push: yes
     source: build
