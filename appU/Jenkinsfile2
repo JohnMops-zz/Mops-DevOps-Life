@@ -37,8 +37,8 @@ pipeline {
           }
         }
         post {
-                always {
-                    junit testResults: '**/target/surefire-reports/*.xml', allowEmptyResults: false
+                success {
+                    sh 'echo $currentBuild.result'
                 }
             }
         }
