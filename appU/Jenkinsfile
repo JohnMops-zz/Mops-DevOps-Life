@@ -19,7 +19,7 @@ pipeline {
                     BuildVersion = "${CurrentVersion}_${commitIDshort}"
                 }
             }
-        }
+        
         stage ('Unit Test') {
             steps {
                 script {
@@ -32,7 +32,7 @@ pipeline {
                         }
                     }
                 }
-}
+
         stage ('Image Build') {
             steps {
                 script {
