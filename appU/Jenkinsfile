@@ -26,7 +26,7 @@ pipeline {
                     dir ('./appU') {
                         try {
                             sh 'python ExperimentTests.py'
-                        } catchError (err) {
+                        } catch (err) {
                             println("Unit Test failed for ${BuildVersion}")
                             currentBuild.result = 'UNSTABLE'
                         }
