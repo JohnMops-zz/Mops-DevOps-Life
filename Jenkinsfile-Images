@@ -13,13 +13,18 @@ environment {
             steps {
                 deleteDir()
                 script {
-                    git credentialsId: 'devopint', url: 'https://github.com/JohnMops/Mops-DevOps-Life/'
+                    checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/JohnMops/Mops-DevOps-Life']]])
+                    CurrentVersion = sh script:"git tag | sort -r | head -1", returnStdout: true
+                    CurrentVersion = CurrentVersion.trim()
+                    nextVersion = CurrentVersion + 1
+                    commitIDshort = sh script:"git rev-parse HEAD | cut -c1-10", returnStdout: true
+                    BuildVersion = "${CurrentVersion}_${commitIDshort}"
                 }
             }
         }
         stage('Ansible Playbook') {
             steps {
-                dir ('New-Project/'){
+                dir ('appU/'){
                 script {
                 targetIP = input(
                             id: 'userInput', message: 'ip add',
@@ -34,8 +39,6 @@ environment {
 )
                     
                     sh "sed -i 's/host/${targetIP}/g' hosts"
-                    sh "sed -i 's/host_ip/${targetIP}/g' group_vars/all"
-                    sh "sed -i 's/roleIn/${roleIn}/g' playbook.yml"
                     sh 'cat hosts'
                     sh 'cat group_vars/all'
                     sh "ansible-playbook -i hosts -u ubuntu -b  --extra-vars role=${roleIn} --private-key=/var/jenkins_home/ansible/mylkp.pem playbook.yml"
