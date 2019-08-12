@@ -31,8 +31,8 @@ pipeline {
                             currentBuild.result = 'UNSTABLE'
 }
         stage ('Image Build') {
-                        steps {
-                          script {
+            steps {
+                script {
                             sh 'docker build -t johnmops/project:${BuildVersion} .'
                           }
                             
