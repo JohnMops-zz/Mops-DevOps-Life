@@ -1,7 +1,7 @@
 ---
 - name: Git clone
   git:
-      repo: 'https://github.com/JohnMops/Mops-DevOps-Life/tree/master/appU'
+      repo: 'https://github.com/JohnMops/Mops-DevOps-Life'
       dest: /opt/Mops
 
 - name: Build an image and push it to a private repo
