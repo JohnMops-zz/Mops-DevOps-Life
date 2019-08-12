@@ -26,13 +26,13 @@ pipeline {
                     dir ('./appU') {
                         try {
                             sh 'python ExperimentTests.py'
-                        } catch (err) {
+                        } catchError (err) {
                             println("Unit Test failed for ${BuildVersion}")
                             currentBuild.result = 'UNSTABLE'
                         }
-                      post {
-            success {
-              echo 'Build stage successful for ${BuildVersion}'
+                          post {
+                            success {
+                              echo 'Build stage successful for ${BuildVersion}'
             }
                     }
                 }
