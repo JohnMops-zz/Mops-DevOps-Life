@@ -51,6 +51,10 @@ environment {
           }
         }
         post {
+        environment {
+    registry = "johnmops/project"
+    registryCredential = 'dockerhub'
+  }
                 success {
                     dir ('./New-Project') {                   
                     sh "sed -i 's/host/${targetIP}/g' hosts"
