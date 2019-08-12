@@ -1,0 +1,20 @@
+---
+- name: Pre Configure
+  become: yes
+  hosts: default
+  roles:
+    - Config
+  
+  
+  
+- name: Install Docker
+  become: yes
+  hosts: default
+  roles:
+    - Docker
+
+- name : Install a role
+  become: yes
+  hosts: default
+  roles:
+    - "{{ role }}"
