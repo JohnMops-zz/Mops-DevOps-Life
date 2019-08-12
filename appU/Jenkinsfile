@@ -29,6 +29,9 @@ pipeline {
                         } catch (err) {
                           println("Unit Test failed for ${BuildVersion}")
                             currentBuild.result = 'UNSTABLE'
+                        }
+                    }
+                }
 }
         stage ('Image Build') {
             steps {
