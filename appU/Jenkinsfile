@@ -22,7 +22,7 @@ pipeline {
         stage ('Unit Test') {
             steps {
                 script {
-                    dir ('./appU') {
+                    dir ('/appU') {
                         try {
                             sh 'python ExperimentTests.py'
                         } catch (err) {
