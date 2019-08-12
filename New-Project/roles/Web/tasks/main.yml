@@ -2,4 +2,4 @@
 
 
 - name: Build an Image
-  raw: docker build -t johnmops/project:{{ BuildV }} ./appU/Dockerfile
+  raw: docker build -t johnmops/project:{{ buildV }} ./appU/Dockerfile
