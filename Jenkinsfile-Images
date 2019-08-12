@@ -1,0 +1,48 @@
+pipeline {
+environment {
+    registry = "johnmops/project"
+    registryCredential = 'dockerhub'
+  }
+
+    agent {
+        label 'master'
+    }
+    stages {
+        stage('checkout'){
+            steps {
+                deleteDir()
+                script {
+                    git credentialsId: 'devopint', url: 'https://github.com/JohnMops/Mops-DevOps-Life/'
+                }
+            }
+        }
+        stage('Ansible Playbook') {
+            steps {
+                dir ('New-Project/'){
+                script {
+                targetIP = input(
+                            id: 'userInput', message: 'ip add',
+                            parameters: [
+                                string(defaultValue: '0.0.0.0',
+                                       description: 'ip address',
+                                       name: 'IP')])
+                                       
+                roleIn = input (
+                id: 'userInput', message: 'Choose Role',
+                parameters: [choice(name: 'Role', choices: "Docker\nES\nJenkins\nKibana\nMetric\nTerraform\nLogstash", description: 'What role do you want to run?')]
+)
+                    
+                    sh "sed -i 's/host/${targetIP}/g' hosts"
+                    sh "sed -i 's/host_ip/${targetIP}/g' group_vars/all"
+                    sh "sed -i 's/roleIn/${roleIn}/g' playbook.yml"
+                    sh 'cat hosts'
+                    sh 'cat group_vars/all'
+                    sh "ansible-playbook -i hosts -u ubuntu -b  --extra-vars role=${roleIn} --private-key=/var/jenkins_home/ansible/myklp.pem playbook.yml"
+
+                }
+            }
+
+        }
+    }
+}
+}
