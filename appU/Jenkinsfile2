@@ -37,6 +37,11 @@ pipeline {
           }
         }
         }
+        post {
+                always {
+                    junit testResults: '**/target/surefire-reports/*.xml', allowEmptyResults: false
+                }
+            }
       stage ('Some') {
         steps {
           script {
@@ -47,12 +52,4 @@ pipeline {
       }
     } 
   
- post {
-        always {
-            script {
-                sh 'echo $currentBuild.result'
-            }
-        }
-    }
-
-
+ 
