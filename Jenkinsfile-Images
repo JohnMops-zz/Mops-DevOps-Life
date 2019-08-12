@@ -2,6 +2,7 @@ pipeline {
 environment {
     registry = "johnmops/project"
     registryCredential = 'dockerhub'
+    dockerimage = ''
   }
 
     agent {
