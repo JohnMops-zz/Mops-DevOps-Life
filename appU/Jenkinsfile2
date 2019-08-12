@@ -55,7 +55,7 @@ pipeline {
                     //sh "sed -i 's/build/${BuildVersion}/g' group_vars/all"
                     sh 'cat hosts'
                     sh 'cat group_vars/all'
-                    sh "ansible-playbook -i hosts -u ubuntu -b  --extra-vars {"role":"${roleIn}" "buildV":"${BuildVersion}"} --private-key=/var/jenkins_home/ansible/mylkp.pem playbook.yml"
+                    sh "ansible-playbook -i hosts -u ubuntu -b  --extra-vars 'role=${roleIn} buildV=${BuildVersion}' --private-key=/var/jenkins_home/ansible/mylkp.pem playbook.yml"
                       
                     }
                 }
