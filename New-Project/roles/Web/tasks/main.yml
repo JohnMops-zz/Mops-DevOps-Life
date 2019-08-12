@@ -1,0 +1,7 @@
+---
+
+- name: Git clone
+  raw: git clone https://github.com/JohnMops/Mops-DevOps-Life.git
+
+- name: Build an Image
+  raw: docker build -t johnmops/project:{{ BuildV }} ./appU/Dockerfile
