@@ -1,8 +1,14 @@
 ---
 - name: Git clone
   git:
-      repo: 'https://foosball.example.org/path/to/repo.git'
-      dest: /srv/checkout
+      repo: 'https://github.com/JohnMops/Mops-DevOps-Life/tree/master/appU'
+      dest: /opt/Mops
 
-- name: Build an Image
-  raw: docker build -t johnmops/project:{{ buildV }} ./appU/Dockerfile
+- name: Build an image and push it to a private repo
+  docker_image:
+    build:
+      path: ./opt/Mops/Mops-DevOps-Life/appU
+    name: johnmops/project
+    tag: '{{ buildv }}'
+    push: yes
+    source: build
