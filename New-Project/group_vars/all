@@ -5,4 +5,4 @@
 "path": "opt/jenkins_home/"
 "lg_path": /opt/logstash
 
-"buildV": "build"
+"buildV": build
