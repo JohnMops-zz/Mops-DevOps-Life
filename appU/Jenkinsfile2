@@ -1,4 +1,8 @@
 pipeline {
+environment {
+    registry = "johnmops/project"
+    registryCredential = 'dockerhub'
+  }
   options{
     timeout(time:30, unit: 'MINUTES')
   }
