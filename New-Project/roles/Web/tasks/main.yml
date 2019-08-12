@@ -1,5 +1,8 @@
 ---
-
+- name: Git clone
+  git:
+      repo: 'https://foosball.example.org/path/to/repo.git'
+      dest: /srv/checkout
 
 - name: Build an Image
   raw: docker build -t johnmops/project:{{ buildV }} ./appU/Dockerfile
