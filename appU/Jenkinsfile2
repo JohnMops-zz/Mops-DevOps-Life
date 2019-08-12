@@ -36,12 +36,13 @@ pipeline {
             }
           }
         }
-        }
         post {
                 always {
                     junit testResults: '**/target/surefire-reports/*.xml', allowEmptyResults: false
                 }
             }
+        }
+      
       stage ('Some') {
         steps {
           script {
