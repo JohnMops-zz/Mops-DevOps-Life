@@ -49,7 +49,7 @@ pipeline {
         post {
                 success {
                     dir ('./New-Project') {
-                    sh "sed -i 's/build/${BuildVersion}/g' group_vars/all"
+                   // sh "sed -i 's/build/${BuildVersion}/g' group_vars/all"
                     sh "sed -i 's/host/${targetIP}/g' hosts"
                     sh "sed -i 's/host_ip/${targetIP}/g' group_vars/all"
                     sh "sed -i 's/roleIn/${roleIn}/g' playbook.yml"
