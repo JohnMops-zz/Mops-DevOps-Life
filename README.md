@@ -39,3 +39,12 @@ Will keep working and building this up as I go.
 6. Universal and can be used anywhere
 
 
+###appU Folder###
+
+1. Contains a python app and a unit test
+2. Jenkinsfile tests the application using the unit test locally
+3. If != SUCCESSm aborts the build
+4. If SUCCESS, uses part of the commit id as a tag
+5. Connects to a remote host via user's input, build the image and 
+pushes it to docker hub fo future useage
+
