@@ -47,4 +47,5 @@ Will keep working and building this up as I go.
 4. If SUCCESS, uses part of the commit id as a tag
 5. Connects to a remote host via user's input, build the image and 
 pushes it to docker hub fo future useage
+6. The above is ran via an Ansible-New-Project and the Web role.
 
