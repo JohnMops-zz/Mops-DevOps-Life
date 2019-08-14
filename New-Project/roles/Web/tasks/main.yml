@@ -30,7 +30,13 @@
     ports:
      - "80:80"
      
-- name: Check that you can connect (GET) to a page and it returns a status 200
+#- name: Check that you can connect (GET) to a page and it returns a status 200
+ # uri:
+  #  url: http://52.58.213.55
+
+- name: Check that a page returns a status 200 and fail if 'Hello World' is not in the page contents
   uri:
     url: http://52.58.213.55
-
+    return_content: yes
+  register: out
+  failed_when: "'Hello World' not in out.content"
