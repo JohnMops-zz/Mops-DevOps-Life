@@ -1,9 +1,9 @@
 ---
 
-#- name: Log into DockerHub
-#  docker_login:
-#    username: yourusername #use only in private repository
-#    password: yourpassword #use only in private repository
+- name: Log into DockerHub
+  docker_login:
+    username: yourusername #use only in private repository
+    password: yourpassword #use only in private repository
 
   
 
@@ -18,7 +18,6 @@
       path: /opt/Mops/appU
     name: johnmops/project
     tag: '{{ buildV }}'
-    #push: yes
     source: build
     
 - name: Start the built image
