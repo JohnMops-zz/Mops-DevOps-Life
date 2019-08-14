@@ -1,7 +1,12 @@
-__author__ = 'k0emt'
+#!/usr/bin/python
+from flask import Flask, request
 
-class Greeter:
-    def __init__(self):
-        self.message = 'Hello world!!!!'
-        # print self.message
-Greeter()
+
+app = Flask(__name__)
+@app.route('/', methods=['GET'])
+def index():
+ return "Hello World"
+
+
+if __name__ == '__main__':
+ app.run(host="0.0.0.0", port=80)
