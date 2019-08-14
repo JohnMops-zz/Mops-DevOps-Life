@@ -1,4 +1,4 @@
-#!/usr/lib/python3
+#!/usr/bin/python
 from flask import Flask, request
 
 
@@ -10,3 +10,4 @@ def index():
 
 if __name__ == '__main__':
  app.run(host="0.0.0.0", port=80)
+
