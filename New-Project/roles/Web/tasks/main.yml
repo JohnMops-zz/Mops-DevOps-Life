@@ -40,6 +40,7 @@
     return_content: yes
   register: out
   failed_when: "'Hello World' not in out.content"
+  register: failed_when
   
 - name: Push Image to docker hub
   docker_image:
