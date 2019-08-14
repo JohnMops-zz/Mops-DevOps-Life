@@ -24,7 +24,7 @@
 - name: Start the built image
   docker_container:
     name: flask
-    image: johnmops/project:'{{ buildV }}'
+    image: johnmops/project:{{ buildV }}
     state: started
     restart: yes
     ports:
