@@ -71,13 +71,7 @@ environment {
             }
         }
       
-      stage ('Some') {
-        steps {
-          script {
-            sh 'pwd'
-          }
-        }
-      }
+     
       }
     } 
   
