@@ -27,7 +27,6 @@ environment {
       }
       
       stage ('Unit Test') {
-      agent { label 'ubuntu' }
       environment {
     registry = "johnmops/project"
     registryCredential = 'dockerhub'
@@ -51,13 +50,12 @@ environment {
                           println("Unit Test failed for ${BuildVersion}")
                             currentBuild.result = 'UNSTABLE'
                         }
-              
+              }
             }
           }
         }
-        post {
-        
-                success {
+           stage ('Building Image') {  
+                steps {
                 agent { label 'master' }
                     dir ('./New-Project') {                   
                     sh "sed -i 's/host/${targetIP}/g' hosts"
@@ -69,7 +67,6 @@ environment {
                     sh "ansible-playbook -i hosts -u ubuntu -b  --extra-vars 'role=${roleIn} buildV=${BuildVersion}' --private-key=/var/jenkins_home/ansible/mylkp.pem playbook.yml -v"
                       
                     }
-                }
             }
         }
       
