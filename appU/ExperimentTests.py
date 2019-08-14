@@ -1,11 +1,13 @@
-__author__ = 'k0emt'
-
+from flask import request
+from app import app
 import unittest
-from Experiment import Greeter
 
-class MyTestCase(unittest.TestCase):
-    def test_main_page(self):
-        response = self.app.get('/', follow_redirects=True)
-        self.assertEqual(response.status_code, 200)
+
+def test_home_data(self):
+        # sends HTTP GET request to the application
+        # on the specified path
+        result = self.app.get('/')
+        self.assertEqual(result.data, "Hello World")
+
 if __name__ == '__main__':
     unittest.main()
