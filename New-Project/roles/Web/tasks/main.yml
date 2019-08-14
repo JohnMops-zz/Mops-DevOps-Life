@@ -40,7 +40,7 @@
     return_content: yes
   register: out
   failed_when: "'Hello World' not in out.content"
-  register: failed_when
+  
   
 - name: Push Image to docker hub
   docker_image:
@@ -48,4 +48,4 @@
     tag: '{{ buildV }}'
     push: yes
     source: local
-  when: failed_when_result == false
+  when: "failed_when_result == false"
