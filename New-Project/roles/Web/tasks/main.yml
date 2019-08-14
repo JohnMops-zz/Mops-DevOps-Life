@@ -12,11 +12,21 @@
       repo: 'https://github.com/JohnMops/Mops-DevOps-Life'
       dest: /opt/Mops
 
-- name: Build an image and push it to a private repo
+- name: Build an image
   docker_image:
     build:
       path: /opt/Mops/appU
     name: johnmops/project
     tag: '{{ buildV }}'
-    push: yes
+    #push: yes
     source: build
+    
+- name: Start the built image
+  docker_container:
+    name: flask
+    image: johnmops/project:'{{ buildV }}'
+    state: started
+    restart: yes
+    ports:
+     - "80:80"
+
