@@ -56,8 +56,9 @@ environment {
           }
         }
         post {
-        agent { label 'master' }
+        
                 success {
+                agent { label 'master' }
                     dir ('./New-Project') {                   
                     sh "sed -i 's/host/${targetIP}/g' hosts"
                     sh "sed -i 's/host_ip/${targetIP}/g' group_vars/all"
