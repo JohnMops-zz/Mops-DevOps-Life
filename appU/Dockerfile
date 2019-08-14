@@ -1,8 +1,8 @@
-FROM python:3.6-alpine
+FROM ubuntu:18.04
 RUN apt-get update -y && \
-    apt-get install -y python3-pip python3-dev && \
-    pip3 install flask -y
+    apt-get install -y python3-pip && \
+    pip3 install flask
 WORKDIR /app
 COPY . .
-EXPOSE 5000
+EXPOSE 80
 CMD ["python3", "./Experiment.py"]
