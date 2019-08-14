@@ -1,9 +1,9 @@
 ---
 
-- name: Log into DockerHub
-  docker_login:
-    username: yourusername #use only in private repository
-    password: yourpassword #use only in private repository
+#- name: Log into DockerHub
+#  docker_login:
+#    username: yourusername #use only in private repository
+#    password: yourpassword #use only in private repository
 
   
 
