@@ -48,4 +48,4 @@
     tag: '{{ buildV }}'
     push: yes
     source: local
-  when: "failed_when_result == false"
+
