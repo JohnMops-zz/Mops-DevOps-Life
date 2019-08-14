@@ -46,7 +46,7 @@ environment {
 )
             dir ('./appU') {
               try {
-                            sh 'python ExperimentTests.py'
+                            sh 'python3 ExperimentTests.py'
                         } catch (err) {
                           println("Unit Test failed for ${BuildVersion}")
                             currentBuild.result = 'UNSTABLE'
