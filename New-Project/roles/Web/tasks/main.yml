@@ -29,4 +29,8 @@
     restart: yes
     ports:
      - "80:80"
+     
+- name: Check that you can connect (GET) to a page and it returns a status 200
+  uri:
+    url: http://52.58.213.55
 
