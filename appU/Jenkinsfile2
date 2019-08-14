@@ -27,6 +27,7 @@ environment {
       }
       
       stage ('Unit Test') {
+      agent { label 'ubuntu' }
       environment {
     registry = "johnmops/project"
     registryCredential = 'dockerhub'
