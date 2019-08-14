@@ -1,4 +1,4 @@
-FROM python:alpine3.7
+FROM python:3.6-alpine
 USER root
 RUN apt-get update -y && \
     apt-get install -y python3-pip python3-dev
