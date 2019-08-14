@@ -56,6 +56,7 @@ environment {
           }
         }
         post {
+        agent { label 'master' }
                 success {
                     dir ('./New-Project') {                   
                     sh "sed -i 's/host/${targetIP}/g' hosts"
