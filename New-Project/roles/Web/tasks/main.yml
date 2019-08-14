@@ -42,7 +42,7 @@
   failed_when: "'Hello World' not in out.content"
   
 - name: Push Image to docker hub 
-    name: johnmops/project
-    tag: '{{ buildV }}'
-    push: yes
-    source: local
+  name: johnmops/project
+  tag: '{{ buildV }}'
+  push: yes
+  source: local
