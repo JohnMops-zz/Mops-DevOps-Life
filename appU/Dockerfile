@@ -1,5 +1,5 @@
 FROM python:alpine3.7
-COPY . /app
 WORKDIR /app
+COPY . /app
 EXPOSE 80
-CMD python app/Experiment.py
+CMD ["python3", "app/Experiment.py"]
