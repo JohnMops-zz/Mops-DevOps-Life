@@ -55,7 +55,7 @@ environment {
           }
         }
            stage ('Building Image') {  
-             agent { label 'slave' }
+             agent { label 'ubuntu' }
                 steps {             
                     dir ('./New-Project') {                   
                     sh "sed -i 's/host/${targetIP}/g' hosts"
