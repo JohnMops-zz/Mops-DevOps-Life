@@ -28,8 +28,8 @@ environment {
       
       stage ('Unit Test') {
       environment {
-    registry = "johnmops/project"
-    registryCredential = 'dockerhub'
+      registry = "johnmops/project"
+      registryCredential = 'dockerhub'
   }
         steps {
           script {
