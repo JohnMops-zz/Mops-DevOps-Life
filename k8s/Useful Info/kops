@@ -1,0 +1,40 @@
+Prepare AWS for Kops
+****** Installing Kops *******
+MacOS:
+Install using HomeBrew1. brew update && brew install kops
+2. curl -Lo kops https://github.com/kubernetes/kops/releases/
+download/$(curl -s https://api.github.com/repos/kubernetes/kops/
+releases/latest | grep tag_name | cut -d '"' -f 4)/kops-darwin-amd64
+3. chmod +x ./kops
+4. sudo mv ./kops /usr/local/bin/
+Linux Machine:
+1. curl -Lo kops https://github.com/kubernetes/kops/releases/
+download/$(curl -s https://api.github.com/repos/kubernetes/kops/
+releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
+2. chmod +x ./kops
+3. sudo mv ./kops /usr/local/bin/
+****** Installing Other Dependencies(KubeCtl) *******
+MacOS:
+Install using HomeBrew1. brew install kubernetes-cli
+2. curl -Lo kubectl https://storage.googleapis.com/kubernetesrelease/release/$(curl -s https://storage.googleapis.com/kubernetesrelease/release/stable.txt)/bin/darwin/amd64/kubectl
+3. chmod +x ./kubectl
+4. sudo mv ./kubectl /usr/local/bin/kubectl
+Linux Machine:
+1. curl -Lo kubectl https://storage.googleapis.com/kubernetesrelease/release/$(curl -s https://storage.googleapis.com/kubernetesrelease/release/stable.txt)/bin/linux/amd64/kubectl
+2. chmod +x ./kubectl
+3. sudo mv ./kubectl /usr/local/bin/kubectl
+****** Download Python PIP *******
+MacOS:
+1. brew install python
+2. curl -O http://python-distribute.org/distribute_setup.py
+3. python distribute_setup.py
+4. curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+5. python get-pip.py
+(If you get Permission Error, add sudo before command)
+Linux Machine:
+1. sudo apt-get install python-pip
+****** Installing AWS CLI *******
+MacOS:
+brew update && brew install awscli
+Linux Machine:
+pip install awscli
